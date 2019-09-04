@@ -1,0 +1,146 @@
+<html>
+
+<head>
+	<title>ReDI.js 1</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed; /* Sit on top of the page content */
+			z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Intro to JavaScript: Orientation</h1>
+				<h3>🚀 ReDI Spring 2019 🚀</h3>
+			</section>
+			<section>
+				<h3>Pre-requisites: What you should already know 📖</h3>
+				<ul>
+					<li class="fragment">Basic Understanding of Web : hyperlinks, browsers, website, server/client ... </li>
+					<li class="fragment">Basic HTML : head, li, p, link ...</li>
+					<li class="fragment">Basic CSS: font, color, selectors, class, attributes ...</li>
+					<li class="fragment">Really good if you written something like a web site!</li>
+				</ul>
+			</section>
+			<section>
+					<h3>Who is this class for? Take this class if you want to become</h3>
+					<ul>
+						<li class="fragment">Frontend Developer</li>
+						<li class="fragment">Backend Developer</li>
+						<li class="fragment">Web Developer</li>
+						<li class="fragment">Web Designer</li>
+						<li class="fragment">UX Designer</li>
+						<li class="fragment">Fullstack Developer</li>
+					</ul>
+				</section>
+			<section>
+				<h2>Welcome! 👋</h2>
+				<p>Let's talk about JavaScript</p>
+			</section>
+			<section>
+				<h3>Why JavaScript? 🤔</h3>
+				<img src="assets/so-dev-survey-header.png" class="illustration">
+				<a href="https://insights.stackoverflow.com/survey/2018/#technology">Source</a>
+			</section>
+			<section>
+				<section>
+					<img src="assets/so-pop-lang.png" class="illustration" />
+				</section>
+			</section>
+
+			<section>
+				<h3>What can you do with JS? 💪</h3>
+				<ul>
+					<li class="fragment">Dynamic web pages</li>
+					<li class="fragment">Web Servers </li>
+					<li class="fragment"><b>Any kind of program, actually! 😲</b></li>
+				</ul>
+				<br><br>
+				<p class="fragment"><i>We focus on web pages for now.</i> 💻</p>
+			</section>
+
+			<section>
+				<h3>But what does that mean? 🤷‍♀️</h3>
+				<p>(see whiteboard)</p>
+				<!-- Here we explain client, server, browser, etc. -->
+			</section>
+
+			<section>
+				<h3>What will we do?</h3>
+				<ul>
+						<li class="fragment">Fundamentals of Computer Science</li>
+						<li class="fragment">Fundamentals of Javascript </li>
+						<li class="fragment">Advance HTML/CSS</li>
+						<li class="fragment">Create an interactive web site</li>
+						<li class="fragment">See last year's project!</li>
+					</ul>
+			</section>
+
+			<section>
+				<h3>Thanks for listening!</h3>
+				<p>Hope to see you in class! 😊</p>
+			</section>
+			<!-- End of the intro session -->
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function() {
+			$('code').click(function(event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+</html>

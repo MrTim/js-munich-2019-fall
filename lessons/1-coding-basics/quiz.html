@@ -1,0 +1,470 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Quiz!</h1>
+			</section>
+			<section>
+				<ul>
+					<li>Where is the client?</li>
+					<li class="fragment">Where is the server?</li>
+					<li class="fragment">Which one can be programmed by JS?</li>
+					<li class="fragment">On which are we focussing for now?</li>
+				</ul>
+			</section>
+			<section>
+				<h4>What does the following code do?</h4>
+				<ul>
+					<li class="fragment">
+						<pre><code>alert("Yo yo yo!");</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(age);</code></pre>
+					</li>
+				</ul>
+				<p class="fragment">What happened? 🤔</p>
+			</section>
+			<section>
+				<h4>We forgot to define the age!</h4>
+				<ul>
+					<li class="fragment">How to tell Javascript that 'age' is a variable?</li>
+					<li class="fragment">
+						<pre><code>let age;</code></pre>
+					</li>
+					<li class="fragment">How to print out "You are (age) years old"?</li>
+					<li class="fragment">
+						<pre><code>let age = 99;
+	alert("You are " + age + " years old");</code></pre>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li>What's a variable again?</li>
+					<li class="fragment">What do you store in a variable?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>How many did you get right?</h3>
+				<h3>🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊</h3>
+			</section>
+	
+			<section>
+				<h3>Bonus Round: HTML & CSS</h3>
+			</section>
+			<section>
+				<ul>
+					<li>What are the two components of the &lt;html&gt; tag?</li>
+					<li class="fragment">→ &lt;head&gt; and &lt;body&gt;</li>
+					<li class="fragment">What goes into the &lt;head&gt; tag?</li>
+					<li class="fragment">What goes into the &lt;body&gt; tag?</li>
+					<li class="fragment">How do you add a paragraph in HTML?</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li>How do you add a CSS style to all paragraphs on your page?</li>
+					<li class="fragment">→ <code>p { ... }</code></li>
+					<li class="fragment">How do you change the font-size of paragraphs?</li>
+					<li class="fragment">→ <code>p { font-size: 24px; }</code></li>
+					<li class="fragment">What's the padding of an element? What's the margin?</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>Quiz!</h1>
+			</section>
+			<section>
+				<ul>
+					<li class="">What's a statement?</li>
+					<li class="fragment answer">→ A single line of JS code, ending in <code>;</code></li>
+					<li class="fragment">What's a string?</li>
+					<li class="fragment answer">→ A piece of text data! 📝</li>
+					<li class="fragment">What's a variable?</li>
+					<li class="fragment answer">→ A place to store data! 📦</li>
+					<li class="fragment">What's a function?</li>
+					<li class="fragment answer">→ A reuseable block of code! ⚙️</li>
+				</ul>
+			</section>
+			<section>
+				<p>
+					How would you write<br>
+					"number of tweets"<br>
+					in camel case? 🐫<br>
+				</p>
+				<div class="answer fragment">
+					<code data-trim>
+						<b>n</b>umber<b>O</b>f<b>T</b>weets
+					</code>
+				</div>
+			</section>
+			<section>
+				<pre><code data-trim>
+					let string1 = "Guten";
+					let string2 = " ";
+					let string3 = "Tag";
+				</code></pre>
+				<p>
+					How do you combine these three to form<br>
+					<code>"Guten Tag"</code>?
+				</p>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						string1 + string2 + string3;
+					</code></pre>
+				</div>
+			</section>
+			<section>
+				<h3>How do you define a function?</h3>
+				<small>(on the white board please)</small>
+				<br><br>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						function myFunction() {
+							code here...
+						}
+					</code></pre>
+				</div>
+			</section>
+			<section>
+				<h3>How do you call / run a function?</h3>
+				<small>(also on the white board please)</small>
+				<br><br>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						myFunction();
+					</code></pre>
+				</div>
+			</section>
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim class="javascript"> 
+					let userName = 'mary99';
+					userName = 'anthony77';
+					alert(userName);
+				</code></pre>
+				<br><br>
+				<div class="answer fragment">
+					Remember:<br>
+					A variable only stores one thing!<br>
+					It forgets everything from before
+				</div>
+			</section>
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim>
+					let myUserName = 'mary99';
+					let yourUserName = 'anthony77';
+					myUserName = yourUserName;
+					yourUserName = myUserName;
+					alert(yourUserName);
+				</code></pre>
+			</section>
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim class="javascript">
+					let s = "";
+	
+					function f() {
+						s = s + "?";
+					}
+	
+					f();
+					f();
+					f();
+					alert(s);
+				</code></pre>
+			</section>
+	
+			<section>
+				<h4>Find the 5 errors:</h4>
+				<pre><code data-trim class="javascript">
+					let my Variable = "hehe;
+	
+					function myFunction {
+						my Variable = "haha";
+					}
+	
+					myFunction;
+					alert((my Variable)));
+				</code></pre>
+			</section>
+
+			<section>
+				<ul>
+					<li class="">What's an (expression) statement?</li>
+					<li class="fragment answer">→ A single line of JS code, ending in <code>;</code></li>
+					<li class="fragment">What's a function?</li>
+					<li class="fragment answer">→ A reuseable block of code! ⚙️</li>
+					<li class="fragment">What's the purpose of arguments?</li>
+					<li class="fragment answer">→ Transport variables into a function! 🚚</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>How do you define a function (incl. 1 argument)?</h3>
+				<small>(on the white board please)</small>
+				<br><br>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						function myFunction(arg) {
+							//code here...
+						}
+					</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h3>How do you call / run a function (with 1 parameter)?</h3>
+				<small>(also on the white board please)</small>
+				<br><br>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						myFunction("foo");
+					</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<p>
+					Is the following variable<br>
+					name valid?<br>
+					<code>let 3_numbers;</code><br>
+				</p>
+				<div class="answer fragment">no! (do not start with numbers)</div>
+				<p>
+					Would this be a good name?
+				</p>
+				<div class="answer fragment">not really ...</div>
+			</section>
+
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim>
+					let name = prompt("Your name?");
+
+					function f(name) {
+						alert("Your name is " + name + "!");
+					}
+
+					name = "'" + name + "'";
+					alert(f(name));
+				</code></pre>
+			</section>
+
+			<section>
+				<h4>Find the 4 errors:</h4>
+				<pre><code data-trim>
+					let myResult;
+
+					this function combines two strings with a space
+					function combine(a, b {
+						myResult = a + " " + b;
+					}
+
+					combine("hi" "there") alert(myResult);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Name the keyword</h3>
+				<ul>
+					<li class="fragment">to declare variables</li>
+					<li class="fragment answer">→ let</li>
+					<li class="fragment">to define a function</li>
+					<li class="fragment answer">→ function</li>
+					<li class="fragment">for a function to give an output</li>
+					<li class="fragment answer">→ return</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<pre><code data-trim>
+					function awesome(number1, number2) {
+						return number1 + number2 + 2;
+					}
+					alert("Awesome " + awesome(20, 33));
+				</code></pre>
+				<br>
+				<ul>
+					<li class="fragment">What's the name of the function?</li>
+					<li class="fragment answer">→ awesome</li>
+					<li class="fragment">What are the arguments to the function?</li>
+					<li class="fragment answer">→ number1 and number2</li>
+					<li class="fragment">What does it output?</li>
+					<li class="fragment answer">→ The sum of the two arguments + 2</li>
+					<li class="fragment">What will be in the alert?</li>
+					<li class="fragment answer">→ Awesome 55</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>How do you ...</h3>
+				<ul>
+					<li class="fragment">add a comment?</li>
+					<li class="fragment answer">→ //</li>
+					<li class="fragment">assign a value to a variable?</li>
+					<li class="fragment answer">→ =</li>
+				</ul>
+			</section>
+
+			<section>
+				<pre><code data-trim>
+					function awesome(myNumber) {
+						if (myNumber === 1) {
+							alert("You chose one");
+						}
+					}
+					awesome(1);
+					awesome(2);
+					awesome(3);
+					awesome(2);
+					awesome(1);
+				</code></pre>
+				<br>
+				<ul>
+					<li class="">What will happen?</li>
+					<li class="fragment answer">→ "You chose one" twice</li>
+				</ul>
+			</section>
+
+			<section>
+				<pre><code data-trim>
+					function awesome(myString) {
+						myString = myString + "?";
+						return myString;
+						myString = myString + "!";
+					}
+					alert(awesome("Yo yo"));
+				</code></pre>
+				<br>
+				<ul>
+					<li>What will happen?</li>
+					<li class="fragment answer">→ "Yo yo?"</li>
+					<li class="fragment answer">→ After the return, functions stop!</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Functions</h3>
+				<ul>
+					<li class="fragment">Are like <b>factories</b> 🏭</li>
+					<li class="fragment">You can <b>put in some stuff</b> <i>(arguments)</i> 📦</li>
+					<li class="fragment">The factory <b>does something</b> <i>(function body)</i> ⚙️</li>
+					<li class="fragment">Then <b>outputs something else</b> <i>(return value)</i> ️⛵️</li>
+				</ul>
+			</section>
+			<section>
+				<h3>📦  ➡ ️️🏭 ⚙  ➡ ⛵️</h3>
+				<pre><code data-trim>
+					function buildShip(planks, sails) {
+						let ship = ...;
+
+						return ship;
+					}
+				</code></pre>
+				<p class="fragment">To call it:</p>
+				<pre class="fragment"><code data-trim>
+					let myPlanks = ...;
+					let mySails = ...;
+					let myFirstShip = buildShip(myPlanks, mySails);
+				</code></pre>
+			</section>
+
+			<section>
+				<p>What does this do?</p>
+				<pre><code data-trim>
+					function myFunction(myArg) {
+						alert("You ran myFunction with argument " + myArg);
+					}
+					let myArg = 'whoops';
+				</code></pre>
+			</section>
+			<section>
+				<p>What does this do?</p>
+				<pre><code data-trim>
+					function myFunction(myArg1, myArg2) {
+						let myVar = (myArg1 + myArg2) / 2;
+						// myVar = (myArg1 - myArg2) * 2;
+						return myVar;
+					}
+
+					let x = myFunction(100, 150);
+
+					alert("The answer is " + x);
+				</code></pre>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

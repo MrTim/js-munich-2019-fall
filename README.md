@@ -48,11 +48,16 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - 3.1) Input validation
 - 3.2) Comparing numbers
 
+
 ## [DOM basics](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/4-DOM-basics/lecture.html)
-// TODO SPRING 7, 8, 9
+- Find elements: getElementById
+- Read and modify content: textContent
+- Events: onclick
 
 ### [Assignments](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/4-DOM-basics/assignments.html)
-// TODO
+- 4.1) Change text
+- 4.2) Swap elements
+- 4.3) How are you?
 
 
 ## [Functions advanced](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/5-functions-advanced/lecture.html)

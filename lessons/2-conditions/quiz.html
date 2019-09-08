@@ -110,6 +110,132 @@
 					}
 				</code></pre>
 			</section>
+
+			<section>
+					<h3>Review</h3>
+					<ul>
+							<li class="fragment">
+									What is a comparison operator?
+							</li>
+							<li class="fragment">
+									<pre><code data-trim>
+										let z = 1 === 2;
+										alert(typeof(z));
+									</code></pre>
+							</li>
+							<li class="fragment">
+									<pre><code data-trim>
+										let x = 1;
+										if (x < 1) {
+										  alert('🐔');
+										} else {
+										  alert('🦊');
+										}
+									</code></pre>
+							</li>
+
+					</ul>
+			</section>
+
+			<section>
+				<h3>What will happen?</h3>
+				<pre><code data-trim>
+					let x = true;
+					function f() {
+					  let x = false;
+					}
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>What will happen?</h3>
+				<pre><code data-trim>
+					let x = true;
+					function f() {
+					  x = false;
+					}
+					f();
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>What will happen?</h3>
+				<pre><code data-trim>
+					let x = true;
+					function f(x) {
+					  x = false;
+					}
+					f(x);
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<p>What does this do?</p>
+				<pre><code data-trim>
+					let x = 20;
+					let y = 30;
+
+					if (x === y) {
+					  alert('Yes');
+					} else {
+					  alert('No');
+					}
+				</code></pre>
+			</section>
+
+			<section>
+					<h3>Guess the results:</h3>
+					<ul>
+							<li><pre><code>alert(12 > 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 < 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 < 12);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 <= 12);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 === 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 !== 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert("bla" === "bla");</code></pre></li>
+							<li class="fragment"><pre><code>alert("bla" !== "bla");</code></pre></li>
+							<li class="fragment"><pre><code>alert("bla" === 12);</code></pre></li>
+					</ul>
+			</section>
+
+			<section>
+				<h3>Guess the results:</h3>
+				<ul>
+					<li>
+						<pre><code>alert(3 > 2 && 3 < 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && 3 > 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 || 3 > 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && !(3 > 2));</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+					<h3>Guess the results:</h3>
+					<ul>
+							<li class="fragment">
+									<pre><code data-trim>
+										let x = 2; let y = 8; let z = 8;
+										alert(y >= x || (x === y && y > z));
+									</code></pre>
+							</li>
+							<li class="fragment">
+									<pre><code data-trim>
+										let x = 2; let y = 8; let z = 8;
+										alert((y >= x && y < z) && !(x === y && y > z));
+									</code></pre>
+							</li>
+					</ul>
+			</section>
 		</div>
 	</div>
 

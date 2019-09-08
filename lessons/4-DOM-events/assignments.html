@@ -49,8 +49,98 @@
 	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
 	<div class="reveal">
 		<div class="slides">
+			<section class="smaller">
+				<h2>4.1) Change text</h2>
+				<ul>
+					<li>Write a function <code>setText(elementId, text)</code></li>
+					<li>It receives a string with an HTML element id and a string with some text</li>
+					<li>Sets the element with the id to contain the text</li>
+					<li>Call it from your Chrome console with different values</li>
+					<li class="emphasis">Bonus: If the element with that id doesn't exist, alert with an error message</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h2>4.2) Swap elements</h2>
+				<ul>
+					<li>Write a function <code>swapText(elementId1, elementId2)</code></li>
+					<li>It takes two element id strings as arguments</li>
+					<li>Swaps the two's text content! Afterwards, they should have exchanged their texts!</li>
+					<li>Add a simple site to try it out. Call the function inside the Chrome console.</li>
+					<li class="emphasis">Bonus: If one element doesn't exist, set the other's text to ":P"</li>
+					<li class="emphasis">Bonus: Add another function that takes three element ids</li>
+				</ul>
+			</section>
+
 			<section>
-				<h1>TODO</h1>
+				<h2>4.3) How are you?</h2>
+				<button id="b1">Good 👍</button><button id="b2">Bad 👎</button>
+				<p id="answer"></p>
+				<style>
+					#b1, #b2 {
+						margin: 0.5em;
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						cursor: pointer;
+					}
+					#b1 {
+						background-color: lightgreen;
+					}
+					#b2 {
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						background-color: lightcoral;
+					}
+				</style>
+				<script>
+					let b1 = document.getElementById("b1");
+					let b2 = document.getElementById("b2");
+					let a = document.getElementById("answer");
+	
+					function b1Click(event) {
+						a.textContent = "That's great 😊";
+					}
+	
+					function b2Click(event) {
+						a.textContent = "Oh that sucks 😥";
+					}
+	
+					b1.addEventListener("click", b1Click);
+					b2.addEventListener("click", b2Click);
+				</script>
+			</section>
+
+			<section class="smaller">
+				<h2>4.3) How are you?</h2>
+				<ul>
+					<li class="fragment">Implement the "How are you?" app!</li>
+					<li class="fragment">Create a HTML paragraph with the question <b>How are you?</b> and another paragraph answer.</li>
+					<li class="smaller answer fragment">You'll need to change the answer when a button was clicked, so add an ID!</li>
+					<li class="fragment">Create two buttons with content <b>Good</b> and <b>Bad</b></li>
+					<li class="fragment">Add <code>onClick</code> event handlers</li>
+					<li class="fragment">In the JS file create two functions that implement the event handlers</li>
+					<li class="fragment">Find the answer paragraph and set its text content</li>
+					<li class="smaller answer fragment">REMEMBER: <code>getElementById</code>, <code>textContent</code>!</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h2>4.3) How are you?</h2>
+				<ul>
+					<li>Finish the "How are you" app.</li>
+					<li>Use CSS to style the <i>good</i> and <i>bad</i> buttons.</li>
+					<li>
+						At the start of your script ask the user for her or his name with a prompt.
+						Change the question to include the name of the user, e.g. "Hi Max, how are you?".
+					</li>
+					<li>
+						BONUS: When the user has clicked one of the buttons, hide the question paragraph.
+						(Hint: set the <i>hidden</i> property of the element)</li>
+					<li>
+						BONUS: Change the background color of the answer paragraph, e.g. green for good and
+						red for bad. (Hint: look for the <code>className</code> property to set a class that you style with CSS)
+					</li>
+				</ul>
 			</section>
 		</div>
 	</div>

@@ -50,7 +50,194 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>TODO</h1>
+				<h2>Back to the roots! √🌲</h2>
+				<h4>How do you make your site interactive?</h4>
+				<img style="max-height: 35vh" src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif">
+			</section>
+
+			<section>
+				<p>How are you?</p>
+				<button id="b1">Good 👍</button><button id="b2">Bad 👎</button>
+				<p id="answer"></p>
+				<style>
+					#b1, #b2 {
+						margin: 0.5em;
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						cursor: pointer;
+					}
+					#b1 {
+						background-color: lightgreen;
+					}
+					#b2 {
+						padding: 0.5em 2em;
+						font-size: 20pt;
+						background-color: lightcoral;
+					}
+				</style>
+				<script>
+					let b1 = document.getElementById("b1");
+					let b2 = document.getElementById("b2");
+					let a = document.getElementById("answer");
+
+					function b1Click(event) {
+						a.textContent = "That's great 😊";
+					}
+
+					function b2Click(event) {
+						a.textContent = "Oh that sucks 😥";
+					}
+
+					b1.addEventListener("click", b1Click);
+					b2.addEventListener("click", b2Click);
+				</script>
+			</section>
+
+			<section>
+				<h2>Questions 🤔</h2>
+				<h4>In JS, how do you ...</h4>
+				<ol>
+					<li class="fragment">run code when a HTML button is clicked?</li>
+					<li class="fragment">change the text inside HTML elements from JS?</li>
+					<li class="fragment">find and use HTML elements (like buttons or paragraphs)?</li>
+				</ol>
+			</section>
+
+			<section>
+				<h4>Let's start with</h4>
+				<h3>3. How to find HTML elements in JS?</h4>
+				<ul>
+					<li class="fragment">In JS, you have full access to the web page</li>
+					<li class="fragment">You can store HTML elements in variables...</li>
+					<li class="fragment">...and then change, delete, duplicate, etc. them</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>3. How to find HTML elements in JS?</h4>
+				<ul>
+					<li class="fragment">It's super easy when your element has an ID:</li>
+					<li class="fragment">
+						<pre><code data-trim>
+							&lt;h1 id="site-header"&gt;My website&lt;/h1&gt;
+						</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code data-trim>
+							let headerElement = document.getElementById("site-header");
+						</code></pre>
+					</li>
+					<li class="fragment">There are also other ways, but let's just use IDs for now</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Quiz:</h2>
+				<pre><code data-trim>
+					&lt;h2 id="list-header"&gt;My hobbies:&lt;/h2&gt;
+					&lt;ul id="hobby-list"&gt;
+						&lt;li id="hobby-reading"&gt;Reading&lt;/li&gt;
+						&lt;li id="hobby-movies"&gt;Watch movies&lt;/li&gt;
+					&lt;/ul&gt;
+				</code></pre>
+				<br>
+				<ul>
+					<li class="fragment">How do you get the "watch movies" list element?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-movies");</code></li>
+					<li class="fragment">How do you get the list itself?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-list");</code></li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>2. How do you read / change the text inside a HTML element?</h4>
+				<ul>
+					<li class="fragment">To read: <code>element.textContent</code></li>
+					<li class="fragment">
+						Example:
+						<pre><code data-trim>
+							&lt;p id="paragraph"&gt;Blabla&lt;/p&gt;
+						</code></pre>
+						<p id="paragraph">Blabla</p>
+						<pre class="fragment"><code data-trim>
+							let pElement = document.getElementById("paragraph");
+							alert(pElement.textContent);
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h2>Exercise</h2>
+				<ul>
+					<li>Create a HTML page with a paragraph containing "Hello World"</li>
+					<li>Add a JS file which <code>alert(...)</code>s the text in the paragraph</li>
+					<li class="emphasis">
+						Hints:
+						<ul class="smaller">
+								<li class="emphasis">Give the paragraph a good ID</li>
+								<li class="emphasis">Use <code>document.getElementById(...)</code> to select it</li>
+								<li class="emphasis">Use <code>.textContent</code> to get the text</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Questions 🤔</h2>
+				<h4>In JS, how do you ...</h4>
+				<ol>
+					<li class="fragment">run code when a HTML button is clicked?</li>
+					<li class="fragment">change the text inside HTML elements from JS?</li>
+					<li class="fragment">find and use HTML elements (like buttons or paragraphs)?</li>
+				</ol>
+			</section>
+
+			<section class="smaller">
+				<h4>1. How do you run code when a button is clicked?</h4>
+				<ul>
+					<li class="fragment">You need to tell the browser: Whenever someone clicks on this, run this function</li>
+					<li class="fragment">Functions that react to events are called <span class="emphasis">event handlers</span></li>
+					<li class="fragment">Add a click event handler by setting the <code>onclick</code> <b>attribute</b> to a function in you JS</li>
+					<li class="fragment">Many more events! (click, mousedown, mousemove, keydown, change, resize, ...)</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h4>Example</h4>
+					<ul>
+						<li>HTML:
+							<pre><code data-trim>
+								<button id="button" onclick="buttonClicked()">Click me</button>
+							</code></pre>
+						</li>
+						<li class="fragment">JS:
+							<pre><code data-trim>			
+								function buttonClicked() {
+									alert("Click!");
+								}
+							</code></pre>
+						</li>
+					</ul>
+
+			</section>
+
+			<section class="smaller">
+				<h2>Text swapping 2.0</h2>
+				<ul>
+					<li class="fragment">Now we'll improve the text swapping exercise by using a button to swap!</li>
+					<li class="fragment">In the HTML, we add a button with onclick handler</li>
+					<li class="fragment">In JS we'll create a function that implements the event handler and swaps the paragraphs</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h2>Exercise</h2>
+				<ul>
+					<li>Create a button in HTML with <code>&lt;button&gt;</code>. Its text should be "don't click me"</li>
+					<li>Add an event handler. When clicked, the button's text should change to "what did I say?"</li>
+					<li class="even smaller emphasis">Hint:<br>Use the <code>onclick</code> attribute and to call a function you define in JS</li>
+				</ul>
 			</section>
 		</div>
 	</div>

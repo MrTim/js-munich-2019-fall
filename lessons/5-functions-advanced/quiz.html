@@ -1,0 +1,316 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Quiz:</h2>
+				<ul>
+					<li>What are the two basic JavaScript scopes you have learned so far?</li>
+					<li class="smaller answer fragment">Global</li>
+					<li class="smaller answer fragment">Local</li>
+				</ul>
+			</section>
+			<section>
+				<p>Question 1.</p>
+				<pre><code data-trim>
+						let cat = 'Mr. Picklesworth';
+						function printLog() {
+							console.log("printLog() -> " + cat);
+						}
+
+						// 1. What will be printed here?
+						console.log(cat);
+						// 2. What will happen here?
+						printLog()
+				</code></pre>
+				<p class="fragment">Variable "cat" is defined in the GLOBAL scope</p>
+			</section>
+			<section>
+				<p>Question 2.</p>
+				<pre><code data-trim>
+				function printLog() {
+					let dog = 'Mr. Maximillian';
+					console.log("printLog() -> " + dog);
+				}
+
+				// 1. What will happen here?
+				printLog()
+				</code></pre>
+				<p class="fragment">Variable "dog" is defined in the LOCAL scope</p>
+			</section>
+			<section>
+				<p>Question 3.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					function printLog() {
+						dog = 'Mr. Honeybun';
+						console.log("printLog() -> " + dog);
+					}
+
+					// 1. What will happen here?
+					console.log(dog);
+					// 2. What will happen here?
+					printLog()
+					</code></pre>
+				<p class="fragment">Variable "dog" is defined in the GLOCAL scope and changed in printLog.</p>
+			</section>
+			<section>
+				<p>Question 4.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					function printLog() {
+						dog = 'Mr. Honeybun';
+						console.log("printLog() -> " + dog);
+					}
+
+					// 1. What will happen here?
+					printLog()
+
+					// 2. What will happen here?
+					console.log(dog);
+					</code></pre>
+				<p class="fragment">Variable "dog" is defined in the GLOCAL scope and it is changed in printLog and
+					changed the output of the second console.log at (2)</p>
+			</section>
+			<section>
+				<p>Question 5.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+					// 2. What will happen here?
+					printLog()
+					// 3. What will happen here?
+					console.log("2 ->" +dog);
+
+					function printLog() {
+						dog = 'Mr. Honeybun';
+						console.log("printLog() -> " + dog);
+					}
+					</code></pre>
+				<p class="fragment">
+					Function printLog() is INVOKED before the function DEFINITION. It is OK!!!!! The function
+					definition has been HOISTED up to the top.
+				</p>
+			</section>
+			<section>
+				<p>Question 6.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+					// 2. What will happen here?
+					printLog("Miss Fabulous")
+
+					function printLog(cat) {
+						console.log("printLog() -> " + cat);
+					}
+					</code></pre>
+				<p class="fragment">
+					The simple case. :)
+				</p>
+			</section>
+			<section>
+				<p>Question 6.</p>
+				<pre><code data-trim>
+			
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+					// 2. What will happen here?
+					printLog(dog)
+
+					function printLog(cat) {
+						console.log("printLog() -> " + cat);
+					}
+					</code></pre>
+				<p class="fragment">
+					The content of the variable "dog" is passed into the function printLog() and printed.
+				</p>
+			</section>
+			<section>
+				<p>Question 6.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+					// 2. What will happen here?
+					printLog("Miss Fabulous")
+
+					function printLog(dog) {
+						console.log("printLog() -> " + dog);
+					}
+
+					// 3. What will happen here?
+					console.log("3 ->" + dog);
+					</code></pre>
+				<p class="fragment">
+					The text "Miss Fabulous" is passed into the function printLog() and printed. Variable "dog" remains
+					unchanged. The "dog" functional argument SHADOWED the globally defined "dog".
+				</p>
+			</section>
+			<section>
+				<p>Question 7.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					printLog("Miss Fabulous")
+
+					function printLog(dog) {
+						let dog = "Mr. Baxington"
+						console.log("printLog() -> " + dog);
+					}
+
+					// 2. What will happen here?
+					console.log("3 ->" + dog);
+					</code></pre>
+				<p class="fragment">
+					Syntax Error from JavasScript! Variable dog has ALREADY been defined in the function's local scope
+					because "dog" is an argument in the function.
+				</p>
+			</section>
+			<section>
+				<p>Question 8.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+					// 2. What will happen here?
+					printLog("Miss Fabulous")
+
+					function printLog(dog) {
+						dog = "Mr. Baxington"	
+						console.log("printLog() -> " + dog);
+					}
+
+					// 3. What will happen here?
+					console.log("3 ->" + dog);
+					</code></pre>
+				<p class="fragment">
+					Bad bad bad! printlLog is overwriting its own argument! Rendering the argument USELESS!
+					Within printlog(), variable "dog" has been SHADOWED !
+				</p>
+			</section>
+
+			<section>
+				<p>Question 9.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+
+					function printLog(dog) {
+						console.log("printLog() -> " + dog);
+					}
+
+					</code></pre>
+				<p class="fragment">
+					We forgot to CALL the function! We need to call printLog("Something") to actually print the log.
+				</p>
+			</section>
+			<section>
+				<p>Question 10.</p>
+				<pre><code data-trim>
+					// 1. What will happen here?
+					function printLog(cat) {
+						console.log("printLog() 2-> " + cat);
+					}
+					let dog = 'Mr. Maximillian';
+					console.log("1 ->" + dog);
+
+					</code></pre>
+				<p class="fragment">
+					We forgot to CALL the function AGAIN!
+				</p>
+			</section>
+			<section>
+				<p>Question 11.</p>
+				<pre><code data-trim>
+					let dog = 'Mr. Maximillian';
+					// 1. What will happen here?
+					console.log("1 ->" + dog);
+					printLog()
+
+					function printLog(dog) {
+						console.log("printLog() 2-> " + dog);
+					}
+					</code></pre>
+				<p class="fragment">
+					We forgot to put in the argument for printLog(). It should be printLog("Miss Fabulous"). The
+					argument "dog" in the function is empty.
+				</p>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

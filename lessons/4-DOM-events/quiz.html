@@ -50,7 +50,70 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>TODO</h1>
+				<h2>Quiz</h2>
+				<ul>
+					<li>How do you get access an HTML element in JS?</li>
+					<li class="smaller answer fragment">document.getElementById(...)</li>
+					<li class="fragment">How do you change the text of an HTML element in JS?</li>
+					<li class="smaller answer fragment">element.textContent</li>
+					<li class="fragment">Which logical operators do you know?</li>
+					<li class="smaller answer fragment">AND: &&</li>
+					<li class="smaller answer fragment">OR: ||</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Quiz</h2>
+				<pre><code data-trim>
+					&lt;h2 id="list-header"&gt;My hobbies:&lt;/h2&gt;
+					&lt;ul id="hobby-list"&gt;
+						&lt;li id="hobby-reading"&gt;Reading&lt;/li&gt;
+						&lt;li id="hobby-movies"&gt;Watch movies&lt;/li&gt;
+					&lt;/ul&gt;
+				</code></pre>
+				<br>
+				<ul>
+					<li class="fragment">How do you get the "watch movies" list element?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-movies");</code></li>
+					<li class="fragment">How do you get the list itself?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-list");</code></li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h2>Review: Events!</h2>
+			</section>
+			<section class="smaller">
+				<ul>
+					<li>What are the functions that react to events called?</li>
+					<li class="answer fragment">event handlers</li>
+					<li class="fragment">How do you add a click event handler?</li>
+					<li class="answer fragment">Add a click event handler by setting the <code>onclick</code>
+						<b>attribute</b>
+						to a JS-function</li>
+					<li class="fragment">Can you name some other events?</li>
+					<li class="answer fragment">Many more events! (click, mousedown, mousemove, keydown, change, resize,
+						...)
+					</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h4>Example</h4>
+				<ul>
+					<li>HTML:
+						<pre><code data-trim>
+								<button id="button" onclick="buttonClicked()">Click me</button>
+							</code></pre>
+					</li>
+					<li class="fragment">JS:
+						<pre><code data-trim>
+								function buttonClicked() {
+									alert("Click!");
+								}
+							</code></pre>
+					</li>
+				</ul>
 			</section>
 		</div>
 	</div>

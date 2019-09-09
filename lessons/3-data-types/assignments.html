@@ -1,0 +1,101 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section class="smaller">
+				<h3>3.1) Input validation</h3>
+				<ul>
+					<li>Get the JavaScript from <a href="hw.js">here</a> (click the link)</li>
+					<li>Change it to
+						<ul>
+							<li>check the input (result of <code>prompt</code>) of the user</li>
+							<li>if the input is not a valid (whole) number let the user retry without decreasing <code>lives</code></li>
+							<li><b>Hint</b> The type of the input is always a <code>string</code>, so you need to think about how to test that this string correctly represents a whole number (example: <code>"23"</code> is valid while <code>"2e"</code> is not)</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h3>3.2) Comparing numbers</h3>
+				<ul>
+					<li>Get two numbers from the user with a prompt.</li>
+					<li>REMEMBER: You have to convert the type of the result returned by the prompt.</li>
+					<li>Write a function that returns <code>true</code> if both numbers have the same sign (meaning they are both positive or both negative).</li>
+					<li>Use a complex logical expression with <code>&&</code> / <code>||</code>.</li>
+					<li>Call the function and write the result to the document.</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

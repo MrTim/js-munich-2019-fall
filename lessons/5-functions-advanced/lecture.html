@@ -1,0 +1,302 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Scopes</h2>
+				<ul>
+					<li>between { and }, e.g. functions</li>
+					<li>variables are only visible in scope</li>
+				</ul>
+				<pre class="fragment"><code data-trim>
+					function f() {
+						let inside = 2; // FUNCTION scope
+					}
+					f();
+					alert(inside);
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Scopes</h2>
+				<p>Global variables (not in scope) are visible in the <b>whole script</b>!</p>
+				<pre><code data-trim>
+					let global = 1;
+					function f() {
+						global = 2;
+					}
+					f();
+					alert(global);
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Scopes</h2>
+				<p>Arguments are in the function scope</p>
+				<pre><code data-trim>
+					function f(argument) {
+						argument = 3;
+					}
+					f();
+					alert(argument);
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Scopes</h2>
+				<p>Arguments are in the function scope</p>
+				<pre><code data-trim>
+					let outside = 0;
+					function f(argument) {
+						argument = 1;
+					}
+					f(outside);
+					alert(outside);
+				</code></pre>
+			</section>
+
+			<section>
+					<h2>Scopes</h2>
+					<p>Arguments are in the function scope</p>
+					<pre><code data-trim>
+						let outside = 0;
+						function f(argument) {
+							argument = 1;
+						}
+						f(outside); // f(0)
+						alert(outside);
+					</code></pre>
+				</section>
+
+			<section>
+				<h2>Scopes</h2>
+				<p>Use the arguments!</p>
+				<pre><code data-trim>
+					// do something
+					function printSum(a, b) {
+						let sum = a + b;
+						document.writeln('<h2>The sum of ' + a + ' and ' + b + ' is ' + sum + '</h2>');
+					}
+					printSum(2, 7);
+					
+					// produce something
+					function sum(a, b) {
+						return a + b
+					}
+					alert(sum(2, 7));
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Scopes</h2>
+				<p>Different scopes!</p>
+				<pre><code data-trim>
+					let whatAmI = 0;
+					function f(whatAmI) {
+						whatAmI = 1;
+					}
+					f(whatAmI);
+					alert(whatAmI);
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Scopes</h2>
+				<p>Different scopes!</p>
+				<pre><code data-trim>
+					let whatAmI = 0;      // GLOBAL
+
+					function f(whatAmI) { // FUNCTION SCOPE
+						whatAmI = 1;  // FUNCTION SCOPE
+					}
+					f(whatAmI);           // GLOBAL
+					alert(whatAmI);       // GLOBAL
+				</code></pre>
+			</section>
+
+			<section>
+				<h1>When things don't work</h1>
+				<ul>
+					<li class="fragment">Code very seldom works on first run</li>
+					<li class="fragment">Must learn to deal with bugs</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>Debugging</h1>
+				<p class="fragment">Admiral Grace Hopper, 1940s</p>
+				<img class="fragment illustration" style="max-height: 300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg/1200px-Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg" />
+			</section>
+
+			<section>
+				<h3>Debugging</h3>
+				<ul>
+					<li>Mark II computer at Harvard University (for US Navy)</li>
+					<li class="fragment">A moth stuck in a switch</li>
+					<li class="fragment">Fixed the problem by "de-bugging"</li>
+				</ul>
+			</section>
+
+			<section>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg" class="illustration">
+			</section>
+
+			<section>
+				<h3>Catching bugs</h3>
+				<ul>
+					<li class="fragment">Syntax highlighting</li>
+					<li class="fragment">Console</li>
+					<li class="fragment">Another pair of eyes (pair programming)</li>
+					<li class="fragment">Take a break</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>DEBUG!</h3>
+				<pre><code data-trim>
+					let favoriteColor = 'blue';
+					let color = prompt("Guess my favourite color:");
+					if (color === favouriteColor) {
+						alert("Correct!")
+					}
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>DEBUG!</h3>
+				<pre><code data-trim>
+					let favoriteColor = 'blue';
+					let color = prompt("Guess my favorite color:");
+					if (color === "favoriteColor") {
+						alert("Correct!")
+					}
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Common bugs</h3>
+				<ul>
+					<li class="fragment error">Uncaught ReferenceError: favouriteColor is not defined</li>
+					<li class="fragment error">Syntax error</li>
+					<li class="fragment error">Expected ( or Missing (</li>
+					<li class="fragment error">...</li>					
+				</ul>
+				<h4 class="fragment">Many are obvious in the syntax highlighting in VS Code!</h4>
+			</section>
+
+			<section>
+				<h3>console.log()</h3>
+				<ul>
+					<li class="fragment">Prints something to the console in the browser</li>
+					<li class="fragment">Normal users of your website do not see it, unless they open the console</li>
+					<li class="fragment">Ideal to find out what's going on 😅</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h3>Where am I???</h3>
+				<pre><code data-trim>
+					function doComplicatedLogic(a, b) {
+						let result = 5
+						if(a < 7 && (b === 0 || b > 7)) {
+							result += 2;
+						} else {
+							result += 3;
+						}
+						return result
+					}
+					alert(doComplicatedLogic(7, 8));
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Where am I???</h3>
+				<p>Console outputs can help!</p>
+				<pre><code data-trim>
+					function doComplicatedLogic(a, b) {
+						let result = 5
+						if(a < 7 && (b === 0 || b > 7)) {
+							console.log("I'm inside if!");
+							result += 2;
+						} else {
+							console.log("I'm inside else!");
+							result += 3;
+						}
+						return result
+					}
+					alert(doComplicatedLogic(7, 8));
+				</code></pre>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

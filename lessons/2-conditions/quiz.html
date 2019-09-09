@@ -1,0 +1,264 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Quiz!</h1>
+			</section>
+
+			<section>
+				<h3>Vocabulary</h3>
+				<ul>
+					<li class="">How to execute conditional code?</li>
+					<li class="fragment answer">→ if</li>
+					<li class="fragment">How to handle cases not in the condition?</li>
+					<li class="fragment answer">→ else</li>
+					<li class="fragment">Which comparison operators are there?</li>
+					<li class="fragment answer">→
+						<code>===, !==, &lt;, &gt;, &lt;=, &gt;=</code>
+					</li>
+					<li class="fragment">What's the keyword for a function to give an output?</li>
+					<li class="fragment answer">→ return</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>What does this do?</h3>
+				<pre><code data-trim>
+				function foo(a) {
+					if(a < 0) {
+						return 1;
+					} else {
+						return 2;
+					}
+				
+					return 3;
+				}
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>What does this do?</h3>
+				<pre><code data-trim>
+						function foo(a) {
+							a = -2;
+							if(a < 0) {
+								return 1;
+							} else {
+								return 2;
+							}
+						}
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Find all 7 errors!</h3>
+				<pre><code data-trim>
+					age = pront("Please enter your age");
+
+					if ("age" > 18) {
+						alert(You are not old enough, please leave.); }
+					} then {
+						alert("permission granted");
+					}
+				</code></pre>
+			</section>
+
+			<section>
+					<h3>Review</h3>
+					<ul>
+							<li class="fragment">
+									What is a comparison operator?
+							</li>
+							<li class="fragment">
+									<pre><code data-trim>
+										let z = 1 === 2;
+										alert(typeof(z));
+									</code></pre>
+							</li>
+							<li class="fragment">
+									<pre><code data-trim>
+										let x = 1;
+										if (x < 1) {
+										  alert('🐔');
+										} else {
+										  alert('🦊');
+										}
+									</code></pre>
+							</li>
+
+					</ul>
+			</section>
+
+			<section>
+				<h3>What will happen?</h3>
+				<pre><code data-trim>
+					let x = true;
+					function f() {
+					  let x = false;
+					}
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>What will happen?</h3>
+				<pre><code data-trim>
+					let x = true;
+					function f() {
+					  x = false;
+					}
+					f();
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>What will happen?</h3>
+				<pre><code data-trim>
+					let x = true;
+					function f(x) {
+					  x = false;
+					}
+					f(x);
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<p>What does this do?</p>
+				<pre><code data-trim>
+					let x = 20;
+					let y = 30;
+
+					if (x === y) {
+					  alert('Yes');
+					} else {
+					  alert('No');
+					}
+				</code></pre>
+			</section>
+
+			<section>
+					<h3>Guess the results:</h3>
+					<ul>
+							<li><pre><code>alert(12 > 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 < 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 < 12);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 <= 12);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 === 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert(12 !== 33);</code></pre></li>
+							<li class="fragment"><pre><code>alert("bla" === "bla");</code></pre></li>
+							<li class="fragment"><pre><code>alert("bla" !== "bla");</code></pre></li>
+							<li class="fragment"><pre><code>alert("bla" === 12);</code></pre></li>
+					</ul>
+			</section>
+
+			<section>
+				<h3>Guess the results:</h3>
+				<ul>
+					<li>
+						<pre><code>alert(3 > 2 && 3 < 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && 3 > 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 || 3 > 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && !(3 > 2));</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+					<h3>Guess the results:</h3>
+					<ul>
+							<li class="fragment">
+									<pre><code data-trim>
+										let x = 2; let y = 8; let z = 8;
+										alert(y >= x || (x === y && y > z));
+									</code></pre>
+							</li>
+							<li class="fragment">
+									<pre><code data-trim>
+										let x = 2; let y = 8; let z = 8;
+										alert((y >= x && y < z) && !(x === y && y > z));
+									</code></pre>
+							</li>
+					</ul>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

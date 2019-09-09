@@ -1,0 +1,143 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Quiz</h2>
+				<ul>
+					<li>How do you get access an HTML element in JS?</li>
+					<li class="smaller answer fragment">document.getElementById(...)</li>
+					<li class="fragment">How do you change the text of an HTML element in JS?</li>
+					<li class="smaller answer fragment">element.textContent</li>
+					<li class="fragment">Which logical operators do you know?</li>
+					<li class="smaller answer fragment">AND: &&</li>
+					<li class="smaller answer fragment">OR: ||</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Quiz</h2>
+				<pre><code data-trim>
+					&lt;h2 id="list-header"&gt;My hobbies:&lt;/h2&gt;
+					&lt;ul id="hobby-list"&gt;
+						&lt;li id="hobby-reading"&gt;Reading&lt;/li&gt;
+						&lt;li id="hobby-movies"&gt;Watch movies&lt;/li&gt;
+					&lt;/ul&gt;
+				</code></pre>
+				<br>
+				<ul>
+					<li class="fragment">How do you get the "watch movies" list element?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-movies");</code></li>
+					<li class="fragment">How do you get the list itself?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-list");</code></li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h2>Review: Events!</h2>
+			</section>
+			<section class="smaller">
+				<ul>
+					<li>What are the functions that react to events called?</li>
+					<li class="answer fragment">event handlers</li>
+					<li class="fragment">How do you add a click event handler?</li>
+					<li class="answer fragment">Add a click event handler by setting the <code>onclick</code>
+						<b>attribute</b>
+						to a JS-function</li>
+					<li class="fragment">Can you name some other events?</li>
+					<li class="answer fragment">Many more events! (click, mousedown, mousemove, keydown, change, resize,
+						...)
+					</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h4>Example</h4>
+				<ul>
+					<li>HTML:
+						<pre><code data-trim>
+								<button id="button" onclick="buttonClicked()">Click me</button>
+							</code></pre>
+					</li>
+					<li class="fragment">JS:
+						<pre><code data-trim>
+								function buttonClicked() {
+									alert("Click!");
+								}
+							</code></pre>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

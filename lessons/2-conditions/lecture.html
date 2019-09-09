@@ -1,0 +1,248 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+                <h3><code>if</code> Statements</h3>
+                <ul>
+					<li>So far our programs are rather uninteresting...</li>
+					<li class="fragment"><code>if</code> we want we can change this 🤪</li>
+                    <li class="fragment">It runs code only under certain <b>conditions</b></li>
+                    <li class="fragment">For conditions, you can e.g. compare two variables</li>
+                </ul>
+			</section>
+
+			<section>
+				<h3>How do you define an <code>if</code> statement?</h3>
+				<br><br>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						if (condition) {
+							//conditional code here...
+						}
+					</code></pre>
+				</div>
+			</section>
+
+            <section>
+                <h3>Conditions: Equals</h3>
+                <ul>
+					<li>The <code>=</code> is assignment ...</li>
+					<li class="fragment">For equality we use <code>===</code> (yes, triple! 👀)</li>
+                    <li class="fragment">Compares two things, e.g., two variables, a variable and a value, ...</li>
+                    <li class="fragment">Example: <code>dog === "chihuahua"</code></li>
+                </ul>
+			</section>
+
+			<section>
+				<h3>Age check</h3>
+				<ul>
+					<li>Imagine you want to make sure the user is 18 or older</li>
+					<li class="fragment">For kids, you want to show a cool web page</li>
+					<li class="fragment">Grownups just get a boring page because they suck</li>
+					<li class="fragment">How can you do it with if?</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Number comparisons</h3>
+				<p class="fragment">So far, we can only check for equality, e.g.</p>
+				<span class="fragment">
+					<pre><code data-trim>
+						let age = prompt("What's your age?");
+
+						if (age === 19) {
+							// Old enough! But what about 20? 21?
+						}
+					</code></pre>
+				</span>
+			</section>
+
+			<section>
+				<h3>Number comparisons</h3>
+				<ul>
+					<li>How to check for "older than 18?"</li>
+					<li class="fragment"><code>age &gt; 18</code></li>
+					<li class="fragment">The opposite: <code>age &lt; 18</code></li>
+					<li class="fragment">
+						Exercise:
+						<ul class="smaller">
+							<li>Write a function "checkAge(age)"</li>
+							<li>If older than 18, return "adult"</li>
+							<li>If younger than 18, return "child"</li>
+							<li>Try it out with some different ages!</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Number comparisons</h3>
+				<ul>
+					<li>Problem: What about age 18? Should count as adult!</li>
+					<li class="fragment">We need a check "greater than or equal"</li>
+					<li class="fragment">Try: <code>age &gt;= 18</code></li>
+					<li class="fragment">Opposite: <code>age &lt;= 18</code></li>
+					<li class="fragment">Update your function with the correct comparisons!</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>else</h3>
+				<ul>
+					<li>There's a way to simplify our code: else!</li>
+					<span class="fragment">
+						<pre><code data-trim>
+							function checkAge(age) {
+								if (age >= 18) {
+									return "adult";
+								} else {
+									return "child";
+								}
+							}
+						</code></pre>
+						<br>
+					</span>
+					<li class="fragment">Comes after if</li>
+					<li class="fragment">Covers all other cases</li>
+				</ul>
+			</section>
+			<section class="smaller">
+				<h3>Summary: Comparisons ⚖️</h3>
+				<ul>
+					<li>Comparisons are what we put inside a <code>if(...)</code></li>
+					<li class="fragment">Are used to compare two values</li>
+					<li class="fragment"><code>===</code> <i class="fragment">(equals)</i></li>
+					<li class="fragment"><code>&lt;</code> <i class="fragment">(less than)</i></li>
+					<li class="fragment"><code>&gt;</code> <i class="fragment">(greater than)</i></li>
+					<li class="fragment"><code>&lt;=</code> <i class="fragment">(less than or equal to)</i></li>
+					<li class="fragment"><code>&gt;=</code> <i class="fragment">(greater than or equal to)</i></li>
+					<li class="fragment"><code>!==</code> <i class="fragment">(not equal)</i></li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h3>Exercise</h3>
+				<ul>
+					<li>You want to have a secret login to your website that only you can use</li>
+					<li>Write a function checkName(name)</li>
+					<li>It checks whether the name argument is the same as your name! (e.g. "Oliver")</li>
+					<li>If it is, return "permitted" => Show "permitted" in an alert</li>
+					<li>If not, return "denied" => Show "denied" in an alert.</li>
+					<span class="fragment">
+						<pre><code data-trim>
+							function checkName(name) {
+								if (name === "Oliver") {
+									return "permitted";
+								} else {
+									return "denied";
+								}
+							}
+							alert(checkName(prompt("What's your name?")));
+						</code></pre>
+						<br>
+					</span>
+					<li class="fragment">Comes after if</li>
+					<li class="fragment">Covers all other cases</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Introducing:</h2>
+				<p><code>document.writeln()</code></p>
+				<ul>
+					<li class="fragment">Take a string as an argument and print it on the browser page</li>
+					<li class="fragment"><b>Replaces</b> everything in the page with the content you passed in</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Example</h3>
+				<ul>
+					<span class="fragment">
+						<pre><code data-trim>
+							document.writeln("Hello World!");
+						</code></pre>
+						<br>
+					</span>
+					<span class="fragment">
+						<pre><code data-trim>
+							document.writeln("Look I am writing on the browser!");
+						</code></pre>
+						<br>
+					</span>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

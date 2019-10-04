@@ -63,12 +63,13 @@
 						alert("Hi " + name + "!");</code></pre>
                 </li>
                 <li class="fragment"><pre><code data-trim>
-						greetMe();
 						function greetMe() {
 							let name;
 							name = prompt("Hey what is your name?");
 							alert("Hey there, " + name + " 👋");
 							}
+						// call the function
+						greetMe();
 						</code></pre>
                 </li>
             </ul>
@@ -115,13 +116,12 @@
                 </li>
                 <li class="fragment">
 					<pre><code data-trim>
-						greetOnlyMe();
 						function greetOnlyMe(){
 						let name = prompt("What is your name");
 						if (name==="Anna") {
 							alert("Hi Anna!");
-						}
-						}
+						}}
+						greetOnlyMe();
 					</code></pre>
                 </li>
             </ul>
@@ -151,7 +151,6 @@
             <ul>
                 <li class="fragment">
 					<pre><code data-trim>
-						greetHero();
 						function greetHero() {
 						let heroName = "Rocket Raccoon"
 						let realName = "Peter Quill's pet";
@@ -163,6 +162,7 @@
 						} else {
 							alert("Hey there, cute fluffy creature 👋");
 						}}
+						greetHero();
 					</code></pre>
                 </li>
                 <li class="fragment"><code>if</code> can be followed by <code>else</code> block</li>
@@ -175,7 +175,6 @@
             <ul>
                 <li class="fragment">
 					<pre><code data-trim>
-						getFavouritePet("cat");
 						function getFavouritePet(pet){
 							if(pet==="dog"){
 								alert("I ❤ dogs");
@@ -184,11 +183,11 @@
 							}else {
 								alert("I ❤ goats");
 						}}
+						getFavouritePet("cat");
 					</code></pre>
                 </li>
                 <li class="fragment">
 					<pre><code data-trim>
-						getFavouritePet("lion");
 						function getFavouritePet(pet){
 							if(pet==="dog"){
 								alert("I ❤ dogs");
@@ -197,6 +196,7 @@
 							}else {
 								alert("I ❤ goats");
 						}}
+						getFavouritePet("lion");
 					</code></pre>
                 </li>
             </ul>
@@ -206,15 +206,15 @@
 			<ul>
 				<li class="fragment">
 					<pre><code data-trim>
-						getFavouritePet(prompt("Who is the best pet?"));
-						function getFavouritePet(pet){
-							switch(pet){
-								case "goat":
-									alert("I ❤ goats too");
-									break;
-								case "cat": alert("🐱 are also fun!"); break;
-								default: alert("I still ❤ goats more than " + pet);
-						}}
+							switch(condition){
+								// same as if(condition === "value1"){}
+								case "value1":
+									// do something
+									break; // end the switch
+								case "valueN": ...
+								default: // else
+									// do something
+							}
 					</code></pre>
 				</li>
 				<li class="fragment">The <code>switch</code> expression is evaluated once</li>
@@ -222,6 +222,72 @@
 				<li class="fragment">If there is a match, the associated block of code is executed</li>
 			</ul>
 		</section>
+		<section>
+			<h3>Enough words, show me your code!</h3>
+				<div class="fragment">
+					<pre><code data-trim>
+						getFavouritePet(prompt("Who is the best pet?"));
+						function getFavouritePet(pet){
+							switch(pet){
+								case "goat":
+									alert("I ❤ goats too");
+									break;
+								case "cat":
+									alert("🐱 are also fun!");
+									break;
+								case "":
+									alert("stop cheating!");
+									break;
+								default:
+									alert("I still ❤ goats more than " + pet);
+						}}
+					</code></pre>
+				</div>
+		</section>
+		<section>
+			<h3>New challenge: greet a super hero with <code>switch</code> block</h3>
+			<ul>
+				<li class="fragment">Super hero has a real name and a hero name</li>
+				<li class="fragment">Check if we are on a mission</li>
+				<li class="fragment">Remember plan B</li>
+				<li class="fragment">
+					<pre><code data-trim>
+						let onMission = prompt("Are we on a mission?");
+						switch(onMission) {
+						case "" :
+							alert();
+							break;
+						default : ... ;
+						}
+					</code></pre>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Here is my solution</h3>
+				<div class="fragment">
+					<pre><code data-trim>
+						function greetHero() {
+						let heroName = "Rocket Raccoon"
+						let realName = "Peter Quill's pet";
+						switch(prompt("Are we on a mission?")){
+						case "yes":
+							alert("Hey there, " + heroName + " 👋");
+							break;
+						case "no":
+							alert("Hey there, " + realName + " 👋");
+							break;
+						default:
+							alert("Hey there, cute fluffy creature 👋");
+						}}
+						greetHero();
+					</code></pre>
+				</div>
+		</section>
+
+
+
+
         <section>
             <h3>Age check</h3>
             <ul>
@@ -231,14 +297,12 @@
                 <li class="fragment">How can you do it with if?</li>
             </ul>
         </section>
-
         <section>
             <h3>Number comparisons</h3>
             <p class="fragment">So far, we can only check for equality, e.g.</p>
             <span class="fragment">
 					<pre><code data-trim>
 						let age = prompt("What's your age?");
-
 						if (age === 19) {
 							// Old enough! But what about 20? 21?
 						}

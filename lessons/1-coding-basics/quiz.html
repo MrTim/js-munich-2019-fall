@@ -1,48 +1,13 @@
 <html>
 
 <head>
-	<title>ReDI.js Kick Off!</title>
+	<title>1 - Coding Basics - Quiz</title>
 	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
 	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
 	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
 	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
-	<style>
-		.reveal pre {
-			margin: 0;
-		}
-
-		.monospace {
-			font-family: monospace !important;
-		}
-
-		.illustration {
-			border: 0px
-		}
-
-		.reveal li {
-			margin-bottom: 0.5em;
-		}
-
-		.reveal pre {
-			width: 100%;
-		}
-
-		.reveal pre code {
-			cursor: pointer;
-		}
-
-		.reveal li pre {
-			width: fit-content;
-		}
-
-		.logo {
-			position: fixed;
-			/* Sit on top of the page content */
-			z-index: 2;
-			/* Specify a stack order in case you're using a different order for other elements */
-		}
-	</style>
+	<link rel="stylesheet" href="../../reveal.js/reveal_redi.css">
 </head>
 
 <body>
@@ -50,18 +15,13 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>Quiz!</h1>
+				<h1>Quiz</h1>
+				<h3>Console, variables</h3>
 			</section>
 			<section>
-				<ul>
-					<li>Where is the client?</li>
-					<li class="fragment">Where is the server?</li>
-					<li class="fragment">Which one can be programmed by JS?</li>
-					<li class="fragment">On which are we focussing for now?</li>
-				</ul>
-			</section>
-			<section>
-				<h4>What does the following code do?</h4>
+				<h4>How do you open the chrome console?</h4>
+				<p class="fragment">➡️ Cntrl + Shift + J / commmand + option + J</p>
+				<h4 class="fragment">What does the following code do?</h4>
 				<ul>
 					<li class="fragment">
 						<pre><code>alert("Yo yo yo!");</code></pre>
@@ -81,8 +41,10 @@
 					</li>
 					<li class="fragment">How to print out "You are (age) years old"?</li>
 					<li class="fragment">
-						<pre><code>let age = 99;
-	alert("You are " + age + " years old");</code></pre>
+						<pre><code data-trim>
+							let age = 99;
+							alert("You are " + age + " years old");
+						</code></pre>
 					</li>
 				</ul>
 			</section>
@@ -92,35 +54,10 @@
 					<li class="fragment">What do you store in a variable?</li>
 				</ul>
 			</section>
-			<section>
-				<h3>How many did you get right?</h3>
-				<h3>🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊</h3>
-			</section>
-	
-			<section>
-				<h3>Bonus Round: HTML & CSS</h3>
-			</section>
-			<section>
-				<ul>
-					<li>What are the two components of the &lt;html&gt; tag?</li>
-					<li class="fragment">→ &lt;head&gt; and &lt;body&gt;</li>
-					<li class="fragment">What goes into the &lt;head&gt; tag?</li>
-					<li class="fragment">What goes into the &lt;body&gt; tag?</li>
-					<li class="fragment">How do you add a paragraph in HTML?</li>
-				</ul>
-			</section>
-			<section>
-				<ul>
-					<li>How do you add a CSS style to all paragraphs on your page?</li>
-					<li class="fragment">→ <code>p { ... }</code></li>
-					<li class="fragment">How do you change the font-size of paragraphs?</li>
-					<li class="fragment">→ <code>p { font-size: 24px; }</code></li>
-					<li class="fragment">What's the padding of an element? What's the margin?</li>
-				</ul>
-			</section>
 
 			<section>
-				<h1>Quiz!</h1>
+				<h1>Quiz</h1>
+				<h3>Functions</h3>
 			</section>
 			<section>
 				<ul>
@@ -445,26 +382,10 @@
 		</div>
 	</div>
 
-
 	<script src="../../jquery-3.3.1.slim.min.js"></script>
 	<script src="../../reveal.js/lib/js/head.min.js"></script>
 	<script src="../../reveal.js/js/reveal.js"></script>
-	<script>
-		Reveal.initialize({
-			history: true,
-			dependencies: [
-				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
-			]
-		});
-
-		// Make each code example executable by clicking it:
-		$(document).ready(function () {
-			$('code').click(function (event) {
-				console.info('Click!', $(this).text());
-				eval($(this).text());
-			});
-		});
-	</script>
+	<script src="../../reveal.js/reveal_redi.js"></script>
 </body>
 
 </html>

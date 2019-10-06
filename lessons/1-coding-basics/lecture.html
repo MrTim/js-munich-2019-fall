@@ -7,42 +7,7 @@
 	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
 	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
 	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
-	<style>
-		.reveal pre {
-			margin: 0;
-		}
-
-		.monospace {
-			font-family: monospace !important;
-		}
-
-		.illustration {
-			border: 0px
-		}
-
-		.reveal li {
-			margin-bottom: 0.5em;
-		}
-
-		.reveal pre {
-			width: 100%;
-		}
-
-		.reveal pre code {
-			cursor: pointer;
-		}
-
-		.reveal li pre {
-			width: fit-content;
-		}
-
-		.logo {
-			position: fixed;
-			/* Sit on top of the page content */
-			z-index: 2;
-			/* Specify a stack order in case you're using a different order for other elements */
-		}
-	</style>
+	<link rel="stylesheet" href="../../reveal.js/reveal_redi.css">
 </head>
 
 <body>
@@ -113,8 +78,8 @@
 					<li><pre><code>let name;</code></pre></li>
 					<li class="fragment"><pre><code>alert(name);</code></pre></li>
 					<li class="fragment"><pre><code>name;</code></pre></li>
-					<li class="fragment"><pre><code>name = "Max";</code></pre></li>
-					<li class="fragment"><pre><code>name = "Grace";</code></pre></li>
+					<li class="fragment"><pre><code>name = "Anna";</code></pre></li>
+					<li class="fragment"><pre><code>name = "Oliver";</code></pre></li>
 					<li class="fragment"><pre><code>name = prompt("What's your name?");</code></pre></li>
 					<li class="fragment"><pre><code>alert("Hi " + name + "!");</code></pre></li>
 				</ul>
@@ -130,7 +95,7 @@
 				<ul>
 					<li>
 						<b>Initialization:</b>
-						(nameOfVariable is choosen by <b>YOU</b>)
+						(nameOfVariable is chosen by <b>YOU</b>)
 						<pre><code>let nameOfVariable;</code></pre>
 					</li>
 
@@ -143,7 +108,7 @@
 					<li>
 						<b>Retrieve value:</b>
 						<pre><code>nameOfVariable</code></pre>
-						(write the variable name whereever you would write a value)
+						(write the variable name wherever you would write a value)
 					</li>
 				</ul>
 			</section>
@@ -169,18 +134,18 @@ nameOfVariable = 5;
 			<section>
 				Example:
 				<p>
-					<pre><code>
-let name;
-name = prompt("What's your name?");
-alert("Hi " + name + "!");
+						<pre><code data-trim>
+						let name;
+						name = prompt("What's your name?");
+						alert("Hi " + name + "!");
 					</code></pre>
 				</p>
 				<p class="fragment">
 					<br>
 					Shorter:
-					<pre class="fragment"><code>
-let name = prompt("What's your name?");
-alert("Hi " + name + "!");
+					<pre class="fragment"><code data-trim>
+						let name = prompt("What's your name?");
+						alert("Hi " + name + "!");
 					</code></pre>
 				</p>
 			</section>
@@ -243,19 +208,6 @@ alert("Hi " + name + "!");
 			</section>
 
 			<section>
-				<h3>Summary (JavaScript intro/Variables)</h3>
-				<ul>
-					<li class="fragment">A website can come with JS code</li>
-					<li class="fragment">It tells the browser what to do</li>
-					<li class="fragment"><code>alert()</code>: Shows a little alert box with text</li>
-					<li class="fragment"><code>prompt()</code>: Asks the user a question</li>
-					<li class="fragment"><code>let ...</code>: Creates a new variable</li>
-					<li class="fragment">Variables are like boxes that you can store data in</li>
-					<li class="fragment">Use <b>Definition</b>, <b>Assignment</b> and <b>Value retrieval</b></li>
-				</ul>
-			</section>
-
-			<section>
 				<h4>What does this do?</h4>
 				<pre><code data-trim>
 let myText;
@@ -281,15 +233,29 @@ alert(myText + "my friend.");
 					</code></pre>
 			</section>
 			<section>
-					<h4>What does this do?</h4>
-					<pre><code data-trim>
+				<h4>What does this do?</h4>
+				<pre><code data-trim>
 let myText;
 let yourText = "Mr. Pickleworth";
 myText = yourText;
 yourText = "Mrs. Treetrunk";
 alert("You look nice today, " + myText);
-						</code></pre>
-				</section>
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Summary (JavaScript intro/Variables)</h3>
+				<ul>
+					<li class="fragment">A website can come with JS code</li>
+					<li class="fragment">It tells the browser what to do</li>
+					<li class="fragment"><code>alert()</code>: Shows a little alert box with text</li>
+					<li class="fragment"><code>prompt()</code>: Asks the user a question</li>
+					<li class="fragment"><code>let ...</code>: Creates a new variable</li>
+					<li class="fragment">Variables are like boxes that you can store data in</li>
+					<li class="fragment">Use <b>Definition</b>, <b>Assignment</b> and <b>Value retrieval</b></li>
+				</ul>
+			</section>
+
 			<section>
 				<h1>Functions</h1>
 			</section>
@@ -300,7 +266,7 @@ alert("You look nice today, " + myText);
 					<li class="fragment">
 						<pre><code>alert("Hello world!");</code></pre>
 					</li>
-					<li class="fragment">This is called a statement. Many many statements in a Javascript file.</li>
+					<li class="fragment">This is called a <b>statement</b>. Many many statements in a Javascript file.</li>
 					<li class="fragment">Usually we can tell it is a statement by the ";"</li>
 				</ul>
 			</section>
@@ -394,6 +360,29 @@ alert("You look nice today, " + myText);
 			</section>
 
 			<section>
+				<h3>Syntax</h3>
+				<ul>
+					<li>
+						<b>Definition:</b>
+						<pre><code data-trim>
+							function nameOfFunction() {
+								// body (your code)
+								// ...
+								// ...
+							}
+						</code></pre>
+						(nameOfFunction is choosen by <b>YOU</b>)
+					</li>
+
+					<li>
+						<b>Function call:</b>
+						<pre><code>nameOfFunction();</code></pre>
+						(can be used in any line in the code after the function was defined)
+					</li>
+				</ul>
+			</section>
+
+			<section>
 				<h1>Comments</h1>
 			</section>
 
@@ -422,6 +411,18 @@ alert("You look nice today, " + myText);
 
 			<section>
 				<img src="assets/comment.jpg">
+			</section>
+
+			<section>
+				<h3>What about this?</h3>
+				<pre><code data-trim>
+					// sayHello
+					function sayHello() {
+						// alert hello world
+						alert("Hello world!");
+					}
+				</code></pre>
+				<p class="answer fragment">Comments should provide <b>additional information</b> and not just repeat what is in the code!</p>
 			</section>
 
 			<section>
@@ -610,26 +611,10 @@ alert("You look nice today, " + myText);
 		</div>
 	</div>
 
-
 	<script src="../../jquery-3.3.1.slim.min.js"></script>
 	<script src="../../reveal.js/lib/js/head.min.js"></script>
 	<script src="../../reveal.js/js/reveal.js"></script>
-	<script>
-		Reveal.initialize({
-			history: true,
-			dependencies: [
-				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
-			]
-		});
-
-		// Make each code example executable by clicking it:
-		$(document).ready(function () {
-			$('code').click(function (event) {
-				console.info('Click!', $(this).text());
-				eval($(this).text());
-			});
-		});
-	</script>
+	<script src="../../reveal.js/reveal_redi.js"></script>
 </body>
 
 </html>

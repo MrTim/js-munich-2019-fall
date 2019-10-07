@@ -17,7 +17,5 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Function output with return
 
 ### [Assignments](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/1-coding-basics/assignments.html)
-- 1.1) Interview
-- 1.2) Hello, Goodbye
-- 1.3) Adding strings
-- 1.4) Userinfo
+- 1.1) Greetings
+- 1.2) Interview

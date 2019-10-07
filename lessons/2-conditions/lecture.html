@@ -202,6 +202,50 @@
             </ul>
         </section>
 		<section>
+			<h3>Can you find all the errors?</h3>
+			<ul>
+				<li class="fragment">
+					<pre><code data-trim>
+						function getFavouritePet("pet"){
+							if(pet==="dog"){
+								return alert("I ❤ dogs");
+							}then (pet = "cat"){
+								"I ❤ cats";
+							}finally {
+								alert(I ❤ goats);
+						}}
+						getFavouritePet(cat);
+					</code></pre>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Introducing <code>return</code> statement</h3>
+			<ul>
+				<li class="fragment">Can you explain this magic?</li>
+				<li class="fragment">
+					<pre><code data-trim>
+						let someValue = prompt("Enter some text")
+						alert(someValue);
+					</code></pre>
+				</li>
+				<li class="fragment">A function can <code>return</code> you a value</li>
+				<li class="fragment">
+					<pre><code data-trim>
+						function getFavouritePet(pet){
+							if(pet==="dog"){
+								return "I ❤ dogs";
+							}else {
+								return "I ❤ goats anyway";
+						}}
+						let animal = prompt("What is the best pet ever?")
+						let textToDisplay = getFavouritePet(animal);
+						alert(textToDisplay);
+					</code></pre>
+				</li>
+			</ul>
+		</section>
+		<section>
 			<h3>Bonus: there is always another way</h3>
 			<ul>
 				<li class="fragment">
@@ -226,20 +270,20 @@
 			<h3>Enough words, show me your code!</h3>
 				<div class="fragment">
 					<pre><code data-trim>
-						getFavouritePet(prompt("Who is the best pet?"));
+						alert(getFavouritePet(prompt("Who is the best pet?")));
 						function getFavouritePet(pet){
 							switch(pet){
 								case "goat":
-									alert("I ❤ goats too");
+									return "I ❤ goats too";
 									break;
 								case "cat":
-									alert("🐱 are also fun!");
+									return "🐱 are also fun!";
 									break;
 								case "":
-									alert("stop cheating!");
+									return "stop cheating!";
 									break;
 								default:
-									alert("I still ❤ goats more than " + pet);
+									return "I still ❤ goats more than " + pet;
 						}}
 					</code></pre>
 				</div>
@@ -284,14 +328,40 @@
 					</code></pre>
 				</div>
 		</section>
-
-
-
-
+		<section>
+			<h3>So what we know so far</h3>
+			<ul>
+				<li class="fragment"><pre><code data-trim>
+						let name = "Peter";
+						alert("Hi " + name + "!");</code></pre>
+				</li>
+				<li class="fragment"><pre><code data-trim>
+					function greetSpiderMan(onMission){
+						if(onMission==="yes"){
+							return "SpiderMan"
+						}else {
+							return "Peter"
+						}
+					}
+					alert("Hi " + greetSpiderMan("no"));
+						</code></pre>
+				</li>
+				<li class="fragment"><pre><code data-trim>
+					function greetSpiderMan(onMission){
+						switch(onMission){
+							case "yes": return "SpiderMan"; break;
+							case "no": return "Peter"; break;
+						}
+					}
+					alert("Hi " + greetSpiderMan("yes"));
+						</code></pre>
+				</li>
+			</ul>
+		</section>
         <section>
-            <h3>Age check</h3>
+            <h3>New challenge: age check</h3>
             <ul>
-                <li>Imagine you want to make sure the user is 18 or older</li>
+                <li class="fragment">Imagine you want to make sure the user is 18 or older</li>
                 <li class="fragment">For kids, you want to show a cool web page</li>
                 <li class="fragment">Grownups just get a boring page because they suck</li>
                 <li class="fragment">How can you do it with if?</li>

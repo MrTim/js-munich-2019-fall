@@ -46,10 +46,16 @@
 				<ul>
 					<li>Open your Chrome</li>
 					<li>Open the <b>console</b>: Press Ctrl + Shift + J</li>
-					<li class="fragment"><pre><code>alert("Hello World");</code></pre></li>
+					<li class="fragment">
+						<pre><code>alert("Hello World");</code></pre>
+					</li>
 					<!-- Talk about how common this pattern is. Function(arguments) -->
-					<li class="fragment"><pre><code>prompt("What's your name?");</code></pre></li>
-					<li class="fragment"><pre><code>20 * 5 + 33.888;</code></pre></li>
+					<li class="fragment">
+						<pre><code>prompt("What's your name?");</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>20 * 5 + 33.888;</code></pre>
+					</li>
 					<li class="fragment"><b>Exercise 1:</b> Show alert that says "Hi, my name is ..."</li>
 					<li class="fragment"><b>Exercise 2:</b> Ask the user for their age</li>
 				</ul>
@@ -59,7 +65,8 @@
 				<ul>
 					<li>Assume you want to ask for the user's name,<br> then reply "Hello Susan!"</li>
 					<li class="fragment">How can you do that? 🤔</li>
-					<li class="fragment">JS needs to remember the name between the <code>prompt</code> and the <code>alert</code>....</li>
+					<li class="fragment">JS needs to remember the name between the <code>prompt</code> and the
+						<code>alert</code>....</li>
 					<li class="fragment">→ You need a way to store the name! 💡</li>
 				</ul>
 			</section>
@@ -75,13 +82,27 @@
 
 			<section>
 				<ul>
-					<li><pre><code>let name;</code></pre></li>
-					<li class="fragment"><pre><code>alert(name);</code></pre></li>
-					<li class="fragment"><pre><code>name;</code></pre></li>
-					<li class="fragment"><pre><code>name = "Anna";</code></pre></li>
-					<li class="fragment"><pre><code>name = "Oliver";</code></pre></li>
-					<li class="fragment"><pre><code>name = prompt("What's your name?");</code></pre></li>
-					<li class="fragment"><pre><code>alert("Hi " + name + "!");</code></pre></li>
+					<li>
+						<pre><code>let name;</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(name);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>name;</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>name = "Anna";</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>name = "Oliver";</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>name = prompt("What's your name?");</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert("Hi " + name + "!");</code></pre>
+					</li>
 				</ul>
 				<p class="fragment">
 					<b>Exercise:</b> Ask for the age, then answer:<br>
@@ -134,7 +155,7 @@ nameOfVariable = 5;
 			<section>
 				Example:
 				<p>
-						<pre><code data-trim>
+					<pre><code data-trim>
 						let name;
 						name = prompt("What's your name?");
 						alert("Hi " + name + "!");
@@ -149,7 +170,7 @@ nameOfVariable = 5;
 					</code></pre>
 				</p>
 			</section>
-			
+
 			<section>
 				<h3>Naming variables</h3>
 				<pre><code>let myText = "hello, world!";</code></pre>
@@ -168,7 +189,8 @@ nameOfVariable = 5;
 						Can start with "_" or "$" but no number
 					</li>
 					<li class="fragment">What else?</li>
-					<li class="fragment">That's it! Other than the first character, any combination of lower case or upper case letters,
+					<li class="fragment">That's it! Other than the first character, any combination of lower case or
+						upper case letters,
 						number, "_" or "$"</li>
 				</ul>
 			</section>
@@ -261,50 +283,17 @@ alert("You look nice today, " + myText);
 			</section>
 
 			<section>
-				<h3>A few words on:</h3>
-				<ul>
-					<li class="fragment">
-						<pre><code>alert("Hello world!");</code></pre>
-					</li>
-					<li class="fragment">This is called a <b>statement</b>. Many many statements in a Javascript file.</li>
-					<li class="fragment">Usually we can tell it is a statement by the ";"</li>
-					<li class="fragment">Usually we have on statement per line of code.</li>
-				</ul>
-			</section>
-			<section>
 				<pre><code>alert("Hello world!");</code></pre>
 				<br>
 				<br>
 				<ul>
-					<li class="fragment">The weird JS jargon "alert" is a special kind of what?</li>
+					<li class="fragment">What is "alert" here?</li>
 					<li class="fragment">It is a <b>function</b></li>
-					<li class="fragment">You will use functions <b>ALL THE TIME</b></li>
-					<li class="fragment">A reusable chunk of code that does <i>something</i></li>
+					<li class="fragment">Functions are building blocks in JavaScipt</li>
+					<li class="fragment">You will use functions <b>all the time</b></li>
+					<li class="fragment"> A JavaScript function is a block of code designed to perform a particular task.</li>
 				</ul>
 			</section>
-			<section>
-				<h2>Who and what defines a function?</h2>
-				<ul>
-					<li class="fragment">Javascript framework itself 💻</li>
-					<li class="fragment">You 👩🏻 👨🏻</li>
-					<li class="fragment">3rd party libraries you are using 📚</li>
-				</ul>
-			</section>
-			<section>
-				<h3>Recap: Strings</h3>
-				<ul>
-					<li><pre><code class="language-javascript">alert("Hello world!");</code></pre></li>
-					<li class="fragment">What do you call the text inside the quotation marks ""?</li>
-					<li class="fragment">It is a <b>string</b>.</li>
-					<li class="fragment">Always wrap a string in single or double quotes.</li>
-					<li class="fragment">Mix quotation marks if you need to display them:</li>
-					<li class="fragment"><pre><code class="language-javascript" data-trim>
-						alert("Let's go!");
-						alert('Speak "friend" and enter.');
-					</code></pre></li>
-				</ul>
-			</section>
-
 			<section>
 				<ul>
 					<li>Let's say you want to ask the user about the weather from time to time 🌤</li>
@@ -390,53 +379,6 @@ alert("You look nice today, " + myText);
 			</section>
 
 			<section>
-				<h1>Comments</h1>
-			</section>
-
-			<section>
-				<ul>
-					<li>It is important that future-you and other people can understand your code</li>
-					<li class="fragment">This is not easy, even with great variable and function names!</li>
-					<li class="fragment">Thankfully, you can add comments!</li>
-				</ul>
-			</section>
-
-			<section>
-				<pre><code data-trim>
-					// Define the variables we need:
-					let x = 10;
-					let y = 2;
-
-					// Divide them to get z:
-					let z = x / (y + 0.1); // Note that I add 0.1 stability!
-
-					// Ask the user if they want to ...
-					let answer = prompt("...");
-				</code></pre>
-				<p class="answer fragment">Everything after <code>//</code> is ignored!</p>
-			</section>
-
-			<section>
-				<img src="assets/comment.jpg">
-			</section>
-
-			<section>
-				<h3>What about this?</h3>
-				<pre><code data-trim>
-					// sayHello
-					function sayHello() {
-						// alert hello world
-						alert("Hello world!");
-					}
-				</code></pre>
-				<p class="answer fragment">Comments should provide <b>additional information</b> and not just repeat what is in the code!</p>
-			</section>
-
-			<section>
-				<h2>Even better functions!</h2>
-			</section>
-
-			<section>
 				<p>Right now, our functions are just reuseable code blocks:<br>They always do the same thing!</p>
 			</section>
 
@@ -489,8 +431,8 @@ alert("You look nice today, " + myText);
 						alert(distance)
 					}
 					</code></pre>
-					<p class="fragment">This function will always show 150! 😓</p>
-					<p class="fragment">The <b>distance</b> depends on<br><b>speed</b> and <b>time</b>!!</p>
+				<p class="fragment">This function will always show 150! 😓</p>
+				<p class="fragment">The <b>distance</b> depends on<br><b>speed</b> and <b>time</b>!!</p>
 			</section>
 			<section>
 				<h2>Arguments to the rescue!</h2>
@@ -551,12 +493,6 @@ alert("You look nice today, " + myText);
 
 			<section>
 				<p>Right now, our functions can only take inputs, but what about outputs?</p>
-				<p class="fragment">Having a variable outside transporting the result seems odd!</p>
-			</section>
-
-			<section>
-				<h2>Oh the pain! 😫</h2>
-				<p>How should I name the outside variable?</p>
 			</section>
 
 			<section>
@@ -571,7 +507,8 @@ alert("You look nice today, " + myText);
 
 			<section>
 				<p>Think of<br><code>return ...</code><br>like<br><code>let result = ...</code></p>
-				<p class="fragment">The <code>...</code> is where the expression (such as <code>a + b</code>) is placed</p>
+				<p class="fragment">The <code>...</code> is where the expression (such as <code>a + b</code>) is placed
+				</p>
 			</section>
 
 			<section>
@@ -613,6 +550,50 @@ alert("You look nice today, " + myText);
 					let result = answerFrom("You", yourMessage);
 					alert(result);
 				</code></pre>
+			</section>
+
+			<section>
+				<h1>Comments</h1>
+			</section>
+
+			<section>
+				<ul>
+					<li>It is important that future-you and other people can understand your code</li>
+					<li class="fragment">This is not easy, even with great variable and function names!</li>
+					<li class="fragment">Thankfully, you can add comments!</li>
+				</ul>
+			</section>
+
+			<section>
+				<pre><code data-trim>
+					// Define the variables we need:
+					let x = 10;
+					let y = 2;
+
+					// Divide them to get z:
+					let z = x / (y + 0.1); // Note that I add 0.1 stability!
+
+					// Ask the user if they want to ...
+					let answer = prompt("...");
+				</code></pre>
+				<p class="answer fragment">Everything after <code>//</code> is ignored!</p>
+			</section>
+
+			<section>
+				<img src="assets/comment.jpg">
+			</section>
+
+			<section>
+				<h3>What about this?</h3>
+				<pre><code data-trim>
+					// sayHello
+					function sayHello() {
+						// alert hello world
+						alert("Hello world!");
+					}
+				</code></pre>
+				<p class="answer fragment">Comments should provide <b>additional information</b> and not just repeat
+					what is in the code!</p>
 			</section>
 
 		</div>

@@ -19,3 +19,5 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 ### [Assignments](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/1-coding-basics/assignments.html)
 - 1.1) Greetings
 - 1.2) Interview
+- 1.3) User info
+- 1.4) Calculator Light

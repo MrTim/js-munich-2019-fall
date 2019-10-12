@@ -78,16 +78,61 @@
 			</section>
 
 			<section>
-				<h3>Homework: 2</h3>
-				<ul class="smaller">
-					<li>Code a function named <span class="emphasis">showUserInfo</span></li>
-					<li>Takes at least 3 arguments: name, age, country, etc.</li>
-					<li>Combines the arguments to one greeting string</li>
-					<li>Then shows alert with the stored greeting</li>
-					<li>Call it with at least 2 different people</li>
+				<h3>1.3) User info</h3>
+				<ul>
+					<li>Codepen Starter: <a href="https://codepen.io/oliverbrehm/pen/bGGEqrL">https://codepen.io/oliverbrehm/pen/bGGEqrL</a></li>
+					<li>Code a function named <b>showUserInfo</b>.</li>
+					<li>It takes at least 3 arguments: name, age, country, etc.</li>
+					<li>Combine the arguments to one greeting string.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>1.3) User info</h3>
+				<ul>
+					<li>Show an alert with the stored greeting.</li>
+					<li>Call it with at least 2 different people.</li>
 					<li>Don't forget to add comments!</li>
-					<li class="emphasis">BONUS: Before calling, ask for each value with prompts</li>
-					<li>Codepen link: https://codepen.io/harshitagupta30/pen/VwwvLbB</li>
+					<li><b>BONUS:</b> Before calling, ask for each value with a prompt.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>1.4) Calculator Light</h3>
+				<ul>
+					<li>Let's create a really simple calculator.</li>
+					<li>It can add, subtract, multiply or divide two values.</li>
+					<li>The users enters two values in the browser and calculate the result when clicking a button.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>1.4) Calculator Light</h3>
+				<img src="assets/calculator_light.png" />
+				<p><i>But how to get the entered values?</i></p>
+			</section>
+
+			<section>
+				<h3>Lookahead</h3>
+				<p><i>(This will be explained in more detail later.)</i></p>
+				<img src="assets/calculator_lookahead.png" />
+
+				<p>The input element:</p>
+				<pre><code data-trim>A: <input id="inputA" type="number"></input></code></pre>
+
+				<p>Get the (html) input element and its (Number) value:</p>
+				<pre><code data-trim>
+					let inputA = document.getElementById("inputA");
+					let value = Number(inputA.value);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>1.4) Calculator Light</h3>
+				<ul>
+					<li>Define four functions: <b>add</b> (already in the template), <b>subtract</b>, <b>multiply</b>, <b>divide</b>.</li>
+					<li>Each function is connected to a calculator button in HTML.</li>
+					<li>In each function, get the A and B values, calculate the corresponding result and show it to the user in an alert.</li>
 				</ul>
 			</section>
 		</div>

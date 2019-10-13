@@ -492,6 +492,36 @@ alert("You look nice today, " + myText);
 			</section>
 
 			<section>
+				<h3>Recap from last week</h3>
+				<ul>
+					<li class="fragment"><code>alert()</code>: Shows a little pop up with some text</li>
+					<li class="fragment"><code>prompt()</code>: Flexibilty of asking a question to user</li>
+					<li class="fragment"><code>let ...</code>: Creates a new variable which are like boxes to store and retrieve data</li>
+					<li class="fragment"><code>Functions</code>: A block of code which are designed to perform a particular task</li>
+					<li class="fragment">How to pass an argument to a function to make them reuseable</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h3>Common Mistakes</h3>
+				<pre class="fragment">
+					<code data-trim>
+						alert("Hello" );
+						prompt("What's Your Name");
+						let name= "Tester";
+						alert("Nice to meet you " +name+ " !!!");
+					</code>
+				</pre>
+				<pre class="fragment">
+					<code data-trim>let name = prompt("What's Your Name");</code>
+				</pre>
+				<pre class="fragment">
+					<code>let welcomeText = "Hello Everyone!'</code>
+				</pre>
+				<p class="fragment">"Hello Everyone" or 'Hello Everyone' => " " or ' ' they should always go in pair.</p>
+			</section>
+
+			<section>
 				<h3>Exercise</h3>
 				<p>Create a function <code>showDayAndDate</code>.</p>
 				<p>It should have two arguments <code>day, date</code>.</p>
@@ -519,6 +549,7 @@ alert("You look nice today, " + myText);
 						return result;
 					}
 				</code></pre>
+				<p>The return statement stops the execution of a function and returns a value from that function.</p>
 			</section>
 
 			<section>
@@ -611,7 +642,75 @@ alert("You look nice today, " + myText);
 				<p class="answer fragment">Comments should provide <b>additional information</b> and not just repeat
 					what is in the code!</p>
 			</section>
-
+			<section>
+				<h3>More about Variables</h3>
+				<ul>
+					<li class="fragment">Just like <b>let</b> we have <b>const</b> or in common term <i>constants</i></li>
+					<li class="fragment">Global and local variables</li>
+					<li class="fragment">Undefined Variables</li>
+				</ul>
+			</section>
+			<section>
+				<h3>let vs const</h3>
+				<ul>
+					<li class="fragment">Variables defined with <b>const</b> behave like let variables, except they cannot be reassigned.</li>
+					<li class="fragment">const variables must be assigned a value when they are declared</li>
+					<pre class="fragment">
+						<code data-trim>
+							const PI = 3.141592653589793;
+							let pi = 3.141592653589793;
+							PI = 3.14;	// This will give an error
+							PI = PI + 10;	// This will also give an error
+							pi = 3.14;	// This will work
+							pi = pi + 10;	// This will also work
+						</code>
+					</pre>
+				</ul>
+			</section>
+			<section>
+				<h3>Local and Global Variables</h3>
+				<ul>
+					<li class="fragment">When you declare a variable outside of any function, it is called a <b>global variable</b>, because it is available to any other code.</li>
+					<li class="fragment">When you declare a variable within a function, it is called a <b>local variable</b>, because it is available only within that function</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Example</h3>
+				<pre class="fragment">
+					<code data-trim>
+						let carName = "Volvo";
+						function car() {
+						  alert(carName); // Here carName is a global variable
+						}
+						car();
+					</code>
+				</pre>
+				<pre class="fragment">
+					<code data-trim>
+						function car() {
+							let carName = "Volvo";
+						}
+						car();
+						alert(carName);
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h3>Undefined Variable</h3>
+				<ul>
+					<li class="fragment">A variable declared using let statement with no assigned value specified has the value of undefined.</li>
+					<li class="fragment">An attempt to access an undeclared variable results in a <b>ReferenceError</b></li>
+					<li class="fragment"> Example:
+						<pre class="fragment">
+							<code data-trim>
+								let a;
+								alert(a);
+								console.log(a);
+							</code>
+						</pre>
+					</li>
+				</ul>
+			</section>
 		</div>
 	</div>
 

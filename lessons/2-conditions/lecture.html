@@ -363,7 +363,7 @@
             <ul>
                 <li class="fragment">Imagine you want to make sure the user is 18 or older</li>
                 <li class="fragment">For kids, you want to show a cool web page</li>
-                <li class="fragment">Grownups just get a boring page because they suck</li>
+                <li class="fragment">Grownups just get a boring page</li>
                 <li class="fragment">How can you do it with if?</li>
             </ul>
         </section>
@@ -423,32 +423,62 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Introducing:</h2>
-            <p><code>document.writeln()</code></p>
-            <ul>
-                <li class="fragment">Take a string as an argument and print it on the browser page</li>
-                <li class="fragment"><b>Replaces</b> everything in the page with the content you passed in</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Example</h3>
-            <ul>
-					<span class="fragment">
-						<pre><code data-trim>
-							document.writeln("Hello World!");
-						</code></pre>
-						<br>
-					</span>
-                <span class="fragment">
-						<pre><code data-trim>
-							document.writeln("Look I am writing on the browser!");
-						</code></pre>
-						<br>
-					</span>
-            </ul>
-        </section>
-
+		<section>
+			<h3>Bonus: complex conditions</h3>
+			<ul>
+				<li>What if we have multiple conditions to check against?</li>
+				<li class="fragment">Challenge: Show alert if user is 10+ years old and love cats</li>
+				<li class="fragment">
+					<pre><code data-trim>
+						function showCat(age, loveCats){
+						if (age >= 10 && loveCats === true) {
+							alert('🐱')
+						}
+						}
+						showCat(12, true)
+					</code></pre>
+				</li>
+				<li class="fragment">We say AND with <code>&&</code> </li>
+				<li class="fragment">We say OR with <code>||</code></li>
+				<li class="fragment">
+					<pre><code data-trim>
+						function showCat(age, loveCats){
+						if ((age >= 10 && loveCats === true) || age === 65) {
+							alert('🐱')
+						}
+						}
+						showCat(65, false)
+					</code></pre>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>lets practice complex conditions</h3>
+			<ul>
+				<li class="fragment"><pre><code>age >= 10 && loveCats === true</code>12, true</pre></li>
+				<li class="fragment"><pre><code>age >= 10 && loveCats === true</code>5, true</pre></li>
+				<li class="fragment"><pre><code>age >= 10 || loveCats === true</code>5, true</pre></li>
+				<li class="fragment"><pre><code>(age >= 10 || loveCats === true) && age < 65</code>65, true</pre></li>
+				<li class="fragment"><pre><code>(age >= 10 || loveCats === true) || age < 65</code>65, true</pre></li>
+				<li class="fragment"><pre><code>(age >= 10 && loveCats === true) || age < 65</code>65, false</pre></li>
+			</ul>
+		</section>
+		<section>
+			<h3>What we finally know</h3>
+				<span class="fragment"><pre><code data-trim>
+					function greetSpiderMan(onMission, age){
+						if(onMission==="yes" && age > 18){
+							return "SpiderMan"
+						}else if(onMission==="yes") {
+							return "Mr SpiderMan"
+						}else {
+							return "Peter"
+						}
+					}
+					alert("Hi " + greetSpiderMan("yes", 5));
+				</code></pre>
+				</span>
+		</section>
     </div>
 </div>
 

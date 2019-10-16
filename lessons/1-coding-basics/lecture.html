@@ -711,6 +711,149 @@ alert("You look nice today, " + myText);
 					</li>
 				</ul>
 			</section>
+
+			<section>
+				<h3>Better Code Practises</h3>
+			</section>
+
+			<section>
+				<h3>Variables</h3>
+				<ul>
+					<li class="fragment">Your variables name should be in a way that they reveal the intention behind it.</li>
+					<li class="fragment">This way they become searchable and easier to understand after a person sees it</li>
+					<li class="fragment"> Use "const" whenever a value of variable doesn't change</li>
+				</ul>
+			</section>
+			<section>
+				<pre class="fragment">
+					<code data-trim>
+						let daysSLV = 10;
+						let y = new Date().getFullYear();
+						
+						let ok;
+						if (user.age > 30) {
+							ok = true;
+						}
+					</code>
+				</pre>
+				<pre class="fragment">
+					<code data-trim>
+						const MAX_AGE = 30;
+						let daysSinceLastVisit = 10;
+						let currentYear = new Date().getFullYear();
+						
+						...
+						const isUserOlderThanAllowed = user.age > MAX_AGE;
+					</code>
+				</pre>
+			</section>
+			<section>
+				<pre class="fragment">
+					<code data-trim>
+						let user.age = prompt('Enter your age');
+						if (user.age > 18) {
+							alert('Under 18');
+						} else if (user.age == 18) {
+							alert('Exact 18');
+						} else if (user.age > 18 ) {
+							alert('above 18');
+						}
+					</code>
+				</pre>
+				<pre class="fragment">
+					<code data-trim>
+						const AGE = 18;
+						let user.age = prompt('Enter your age');
+						if (user.age < AGE) {
+							alert('Under 18');
+						} else if (user.age === AGE) {
+							alert('Exact 18');
+						} else if (user.age > AGE ) {
+							alert('above 18');
+						}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<ul><li>Don't add extra not needed words to variable names</li></ul>
+				<pre class="fragment">
+					<code data-trim>
+						let nameValue;
+						let theProduct;
+					</code>
+				</pre>
+				<pre class="fragment">
+					<code data-trim>
+						let name;
+						let product;
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<h3>Functions</h3>
+				<ul>
+					<li class="fragment">Use long and descriptive names</li>
+					<li class="fragment">Their name should say what they do</li>
+					<li class="fragment">Considering that it represents a certain behavior, a function name should be a verb or phrase fully exposing the intent behind it as well as the intent of arguements</li>
+				</ul>
+			</section>
+			<section>
+				<pre>
+					<code data-trim>
+						function notif(user) {
+							// implementation
+						}
+					</code>
+				</pre>
+				<pre class="fragment">
+					<code data-trim>
+						function notifyUser(emailAddress) {
+							// implementation
+						}
+					</code>
+				</pre>
+			</section>
+			<section>
+				<ul>
+					<li>A function should do only one thing</li>
+					<li class="fragment">Which means avoid exectuting multiple actions within a single function</li>
+				</ul>
+				<pre class="fragment"><code data-trim>
+					function myFunction(myArg1, myArg2) {
+						let myVar = (myArg1 + myArg2) / 2;
+						myVar = (myArg1 - myArg2) * 2;
+						return myVar;
+					}
+
+					let x = myFunction(100, 150);
+
+					alert("The answer is " + x);
+				</code></pre>
+			</section>
+			
+			<section>
+				<pre><code data-trim>
+					function myFunctionAddAndDivide(myArg1, myArg2) {
+						let myVar = (myArg1 + myArg2) / 2;
+						return myVar;
+					}
+
+					let x = myFunction(100, 150);
+
+					alert("The answer is " + x);
+				</code></pre>
+				<pre class="fragment"><code data-trim>
+					function myFunctionMultiplyAndSubtract(myArg1, myArg2) {
+						let myVar = (myArg1 - myArg2) * 2;
+						return myVar;
+					}
+
+					let x = myFunction(100, 150);
+
+					alert("The answer is " + x);
+				</code></pre>
+			</section>
 		</div>
 	</div>
 

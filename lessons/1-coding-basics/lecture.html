@@ -725,7 +725,7 @@ alert("You look nice today, " + myText);
 				</ul>
 			</section>
 			<section>
-				<pre class="fragment">
+				<pre>
 					<code data-trim>
 						let daysSLV = 10;
 						let y = new Date().getFullYear();
@@ -748,7 +748,7 @@ alert("You look nice today, " + myText);
 				</pre>
 			</section>
 			<section>
-				<pre class="fragment">
+				<pre>
 					<code data-trim>
 						let user.age = prompt('Enter your age');
 						if (user.age > 18) {
@@ -788,6 +788,21 @@ alert("You look nice today, " + myText);
 						let product;
 					</code>
 				</pre>
+			</section>
+
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim class="javascript"> 
+					let userName = 'mary99';
+					userName = 'anthony77';
+					alert(userName);
+				</code></pre>
+				<br><br>
+				<div class="answer fragment">
+					Remember:<br>
+					A variable only stores one thing.<br>
+					It forgets everything from before
+				</div>
 			</section>
 
 			<section>
@@ -854,6 +869,118 @@ alert("You look nice today, " + myText);
 					alert("The answer is " + x);
 				</code></pre>
 			</section>
+
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim class="javascript">
+					let s = "";
+	
+					function f() {
+						s = s + "?";
+					}
+	
+					f();
+					f();
+					f();
+					alert(s);
+				</code></pre>
+			</section>
+
+			<section>
+				<h4>Find the 5 errors:</h4>
+				<pre><code data-trim class="javascript">
+					let my Variable = "Super;
+	
+					function myFunction {
+						my Variable = "Awesome";
+					}
+	
+					myFunction;
+					alert((my Variable)));
+				</code></pre>
+			</section>
+
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim>
+					let name = prompt("Your name?");
+
+					function f(name) {
+						alert("Your name is " + name + "!");
+					}
+
+					name = "'" + name + "'";
+					alert(f(name));
+				</code></pre>
+			</section>
+			<section>
+				<h3>Exercises</h3>
+			</section>
+			<section>
+				<ul>
+					<li>Declare two variables: admin and name</li>
+					<li>Ask the user to input the name and assign the value to name</li>
+					<li>Copy the value from name to admin</li>
+					<li>Show the value of admin using alert</li>
+				</ul>
+				<pre class="fragment">
+					<code data-trim>
+						let admin, name; // can declare two variables at once
+						
+						name = prompt("Enter the name");
+						
+						admin = name;
+						
+						alert( admin ); // "John"
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<ul>
+					<li>Create a variable with the name of our planet. How would you name such a variable?</li>
+				</ul>
+				<pre class="fragment">
+					<code data-trim>
+						let ourPlanetName = "Earth";
+					</code>
+				</pre>
+				<p class="fragment">Note, we could use a shorter name planet, but it might be not obvious what planet it refers to. It’s nice to be more verbose. At least until the variable isNotTooLong.</p>
+			</section>
+			<section>
+				<ul><li>Create a variable to store the name of a current visitor to a website. How would you name that variable?</li></ul>
+				<pre class="fragment">
+					<code data-trim>
+						let currentUserName = "John";
+					</code>
+				</pre>
+				<p class="fragment">Again, we could shorten that to userName if we know for sure that the user is current.</p>
+			</section>
+			<section>
+					<ul>
+						<li>Write a function named tellFortune that:</li>
+						<ul>
+							<li>takes 4 arguments: number of children, partner's name, geographic location, job title</li>
+							<li>outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."</li>
+						</ul>
+						<li>Call that function 3 times with 3 different values for the arguments.</li>
+					</ul>
+				</section>
+			<section>
+				<pre>
+					<code data-trim>
+						function tellFortune(jobTitle, geoLocation, partner, numKids) {
+							var future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ' and married to ' +
+							partner + ' ' + ' with ' + numKids + ' kids.';
+							console.log(future);
+						}
+						
+						tellFortune('bball player', 'spain', 'Shaq', 3);
+						tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
+						tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
+					</code>
+				</pre>
+				</section>
 		</div>
 	</div>
 

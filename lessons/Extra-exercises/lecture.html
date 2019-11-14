@@ -1,0 +1,259 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+      <section class="smaller">
+        <h2>Exercise 1</h2>
+        <p>Is "else" required?</p>
+        <pre class="fragment">
+          <code data-trim>
+            function checkAge(age) {
+              if (age > 18) {
+                return true;
+              } else {
+                // ...
+                return confirm('Did parents allow you?');
+              }
+            }
+          </code>
+        </pre>
+      </section>
+      <section>
+        <p class="fragment">Will the function work differently if else is removed?</p>
+        <pre class="fragment">
+          <code data-trim>
+            function checkAge(age) {
+              if (age > 18) {
+                return true;
+              }
+                // ...
+              return confirm('Did parents allow you?');
+            }
+          </code>
+        </pre>
+        <p class="fragment">Is there any difference in the behavior of these two variants?</p>
+      </section>
+      <section class="smaller">
+        <h2>Exercise 2</h2>
+        <p>Rewrite the "switch" into an "if"</p>
+        <pre class="fragment">
+          <code data-trim>
+            switch (browser) {
+              case 'Edge':
+                alert( "You've got the Edge!" );
+                break;
+            
+              case 'Chrome':
+              case 'Firefox':
+              case 'Safari':
+              case 'Opera':
+                alert( 'Okay we support these browsers too' );
+                break;
+            
+              default:
+                alert( 'We hope that this page looks ok!' );
+            }
+          </code>
+        </pre>
+      </section>
+      <section>
+        <p>Solution</p>
+        <pre class="fragment">
+            <code data-trim>
+              if(browser == 'Edge') {
+                alert("You've got the Edge!");
+              } else if (browser == 'Chrome'
+                || browser == 'Firefox'
+                || browser == 'Safari'
+                || browser == 'Opera') {
+                alert( 'Okay we support these browsers too' );
+              } else {
+                alert( 'We hope that this page looks ok!' );
+              }
+            </code>
+        </pre>
+      </section>
+      <section class="smaller">
+        <h2>Exercise 3</h2>
+        <p>Rewrite "if" into "switch"</p>
+        <pre class="fragment">
+          <code data-trim>
+            let a = prompt('a?', '');
+
+            if (a == 0) {
+              alert( 0 );
+            }
+            if (a == 1) {
+              alert( 1 );
+            }
+            
+            if (a == 2 || a == 3) {
+              alert( '2,3' );
+            }
+          </code>
+        </pre>
+      </section>
+      <section>
+        <p>Solution</p>
+        <pre class="fragment">
+            <code data-trim>
+              let a = prompt('a?', '');
+
+              switch (a) {
+                case 0:
+                  alert( 0 );
+                  break;
+              
+                case 1:
+                  alert( 1 );
+                  break;
+              
+                case 2:
+                case 3:
+                  alert( '2,3' );
+                  break;
+              }
+            </code>
+        </pre>
+      </section>
+      <section class="smaller">
+        <h2>Exercise 4</h2>
+        <h4 class="fragment">Check the range between</h4>
+        <ul>
+          <li class="fragment">Write an “if” condition to check that age is between 14 and 90 inclusively.
+            <p class="fragment">“Inclusively” means that age can reach the edges 14 or 90.</p>
+          </li>
+         <pre class="fragment">
+            <code data-trim>
+              if (age >= 14 && age <= 90)
+            </code>
+          </pre>
+        </ul>
+      </section>
+      <section class="smaller">
+        <h2>Exercise 5</h2>
+        <h4 class="fragment">Check the range outside</h4>
+        <ul>
+          <li class="fragment">Write an if condition to check that age is NOT between 14 and 90 inclusively.
+            <p class="fragment">Create two variants: the first one using NOT !, the second one – without it.</p>
+          </li>
+         <pre class="fragment">
+            <code data-trim>
+                if (!(age >= 14 && age <= 90))
+            </code>
+          </pre>
+          <pre class="fragment">
+            <code data-trim>
+                if (age < 14 || age > 90)
+            </code>
+          </pre>
+        </ul>
+      </section>
+      <section>
+				<h2>Exercise 6</h2>
+				<pre><code data-trim>
+					&lt;h2 id="list-header"&gt;My hobbies:&lt;/h2&gt;
+					&lt;ul id="hobby-list"&gt;
+						&lt;li id="hobby-reading"&gt;Reading&lt;/li&gt;
+						&lt;li id="hobby-movies"&gt;Watch movies&lt;/li&gt;
+					&lt;/ul&gt;
+				</code></pre>
+				<br>
+				<ul>
+					<li class="fragment">How do you get the "watch movies" list element?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-movies");</code></li>
+					<li class="fragment">How do you get the list itself?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("hobby-list");</code></li>
+				</ul>
+			</section>
+      <section>
+        <h2>Exercise 7</h2>
+				<h3>Guess the results:</h3>
+				<ul>
+					<li>
+						<pre><code>alert(3 > 2 && 3 < 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && 3 > 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 || 3 > 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && !(3 > 2));</code></pre>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -50,9 +50,24 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
+					<h1>Intruducing DOM</h1>
+					<h2><i>The Document Object Model</i></h2>
+			</section>
+
+			<section>
 				<h2>Back to the roots! √🌲</h2>
 				<h4>How do you make your site interactive?</h4>
 				<img style="max-height: 35vh" src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif">
+			</section>
+
+			<section>
+				<h4>DOM - The Document Object Model</h4>
+				<ul>
+					<li>Lets you inspect and <i>change</i> the content of HTML nodes.</li>
+					<li>Model of the node tree, like you write it in HTML.</li>
+					<li>Interact with it in JS using the <b>document</b> object.</li>
+					<li>E.g. <i>document.getElementByIde</i>, <i>document.writeln</i></li>
+				</ul>
 			</section>
 
 			<section>
@@ -238,6 +253,221 @@
 					<li>Add an event handler. When clicked, the button's text should change to "what did I say?"</li>
 					<li class="even smaller emphasis">Hint:<br>Use the <code>onclick</code> attribute and to call a function you define in JS</li>
 				</ul>
+			</section>
+
+			<section>
+				<h2>DOM - Document Object Model</h2>
+				<p><i>Let's look at it in detail</i></p>
+			</section>
+
+			<section>
+				<ul>
+					<li>Under the cover the browser make sense of all the HTML, CSS, and JS in a hierachical structure.
+					</li>
+					<li>Document Object Model or DOM</li>
+				</ul>
+				<p>A simplified view</p>
+				<img src="assets/domtree.png" alt="dom tree">
+			</section>
+			<section>
+				<ul>
+					<li>Everything that make up of the DOM is generally known as <span class="emphasis">nodes</span>
+					</li>
+					<img src="assets/nodes.png" alt="nodes">
+				</ul>
+			</section>
+			<section>
+				<p>Before we go off traversing the tree and modifing the DOM, we need to know 2 special objects</p>
+				<ul>
+					<li class="fragment">window</li>
+					<li class="fragment">document</li>
+					<img class="fragment" src="assets/domtree.png" alt="dom tree">
+				</ul>
+			</section>
+
+			<section>
+				<h3>window</h3>
+				<p class="fragment">Root of the DOM</p>
+				<p class="fragment">deals with the browser window</p>
+				<img class="fragment" src="assets/window.png" alt="dom tree">
+			</section>
+			<section>
+				<h3>window</h3>
+				<ul>
+					<li class="fragment">deals with the browser window</li>
+					<li class="fragment">accessing current URL</li>
+					<li class="fragment">using local storage</li>
+					<li class="fragment">setting status text</li>
+				</ul>
+			</section>
+			<section>
+				<h3>We all know and love <span class="emphasis">document</span object></h3>
+				<p class="fragment">Document has to do with everything inside your document</p>
+				<img class="fragment" src="assets/document.png" alt="dom tree">
+			</section>
+			<section>
+				<h3>What can we do with document?</h3>
+				<ul>
+					<li class="fragment">read element</li>
+					<li class="fragment">modify element</li>
+					<li class="fragment">add/delete element</li>
+					<li class="fragment">change attributes on an element</li>
+				</ul>
+			</section>
+			<section>
+				<img src="assets/recap.png" style="width:100%" alt="">
+			</section>
+			<section>
+				<p>parent, children, siblings</p>
+				<img src="assets/domrelationship.png" style="width:80%" alt="">
+			</section>
+			<section>
+				<p>DOM traversing</p>
+				<img src="assets/domtraverse.png" style="width:80%" alt="dom traverse">
+			</section>
+			<section>
+				<p>DOM traversing</p>
+				<img src="assets/domtraverse2.png" style="width:70%" alt="dom parent children">
+			</section>
+			<section>
+				<h3>Example 1: Getting the first child element</h3>
+				HTML:
+				<pre><code data-trim>
+					<ul id="shoppingList">
+						<li>Milk</li>
+						<li>Eggs</li>
+						<li>Carrots</li>
+					</ul>
+				</code></pre>
+				JS:
+				<pre class="fragment"><code data-trim>
+					let listEl = document.getElementById("shoppingList");
+					alert(listEl.firstElementChild.textContent)
+				</code></pre>
+			</section>
+			<section>
+				<h3>Example 2: Getting the number of children</h3>
+				HTML:
+				<pre><code data-trim>
+					<ul id="shoppingList">
+						<li>Milk</li>
+						<li>Eggs</li>
+						<li>Carrots</li>
+					</ul></code></pre>
+				JS:
+				<pre class="fragment"><code data-trim>
+					let listEl = document.getElementById("shoppingList");
+					alert(listEl.childElementCount)
+				</code></pre>
+			</section>
+			<section>
+				<h3>Example 2: Getting the number of children</h3>
+				HTML:
+				<pre><code data-trim>
+					<ul id="shoppingList">
+						<li>Milk</li>
+						<li>Eggs</li>
+						<li>Carrots</li>
+					</ul>
+				</code></pre>
+				JS:
+				<pre><code data-trim>
+					let listEl = document.getElementById("shoppingList");
+					alert(listEl.childElementCount)
+				</code></pre>
+				<ul>
+					<li>Try adding a few more items, does the count reflect the number of items?</li>
+					<li>What happens when there are no children?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Example 3: Accessing all the children</h3>
+				HTML:
+				<pre><code data-trim>
+					<ul id="shoppingList">
+						<li>Milk</li>
+						<li>Eggs</li>
+						<li>Carrots</li>
+					</ul>
+				</code></pre>
+				JS:
+				<pre><code data-trim>
+					let listEl = document.getElementById("shoppingList");
+					alert(listEl.children)
+				</code></pre>
+				What happened?
+			</section>
+
+			<section>
+				<h3>Children returns an array!</h3>
+				<p>How do we loop through an array?</p>
+				<p>You can get its elements</p>
+				<pre><code data-trim>
+					listEl.children[0]
+					listEl.children[1]
+					listEl.children[2]
+					// ...
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Creating new elements</h3>
+				<p><i>Follow this workflow:</i></p>
+				<ol>
+					<li>Create a new item with <b>document.createElement(tagName)</b></li>
+					<li>Configure the element, e.g. set its <b>textContent</b></li>
+					<li>Append it to an existing item using <b>appendChild</b></li>
+				</ol>
+			</section>
+
+			<section class="">
+				<h5>How to create a new <code>&lt;p></code>-element in JS?</h5>
+				<pre class="fragment"><code data-trim>
+							let newEl = document.createElement("p");
+						</code></pre>
+				<br>
+				<h5 class="fragment">How to set the text inside it?</h5>
+				<pre class="fragment"><code data-trim>
+							newEl.textContent = "Hello world!";
+						</code></pre>
+				<br>
+				<h5 class="fragment">How to append it to an existing div?</h5>
+				<pre class="fragment"><code data-trim>
+							divEl = ...;
+							divEl.appendChild(newEl);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Example: Adding cereals</h3>
+				HTML:
+				<pre><code data-trim>
+					<ul id="shoppingList">
+						<li>Milk</li>
+						<li>Eggs</li>
+						<li>Carrots</li>
+					</ul>
+				</code></pre>
+				JS:
+				<pre class="fragment"><code data-trim>
+					let listEl = document.getElementById("shoppingList");
+					let cerealsElement = document.createElement("li");
+					cerealsElement.textContent = "Cereals";
+					listEl.appendChild(cerealsElement);
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Exercise: Shopping list</h3>
+				<ul>
+					<li>Let the user add new items to the list!</li>
+					<li>In HTML create a text input and a button that sais "Add"</li>
+					<li>When the button is clicked, the inputs text (<b>.value</b>) should be added to the shopping list.</li>
+					<li>For that you have to create a new li element (<b>document.createElement</b>) ...</li>
+					<li>... modify its <b>textContent</b></li>
+					<li>... and append it to the shopping list element</li>
+				</ul>
+			
 			</section>
 		</div>
 	</div>

@@ -1,0 +1,27 @@
+body {
+  padding: 0.5em;
+}
+
+.box {
+  border: solid 1px lightblue;
+  padding: 1em;
+}
+
+.header {
+  background-color: lightblue;
+  color: #f15a22;
+}
+
+.footer {
+  margin: 0.5em;
+  text-align: right;
+  font-weight: bold;
+  color: #f15a22;
+}
+
+.message {
+  border: solid 1px gray;
+  padding: 1em;
+  background-color: #F4EEEE;
+  margin-bottom: 0.5em;
+}

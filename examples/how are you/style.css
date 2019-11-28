@@ -1,0 +1,35 @@
+body {
+  padding: 0.5em;
+}
+
+.box {
+  border: solid 1px lightblue;
+  padding: 1em;
+}
+
+.header {
+  background-color: lightblue;
+  color: #f15a22;
+}
+
+.footer {
+  margin: 0.5em;
+  text-align: right;
+  font-weight: bold;
+  color: #f15a22;
+}
+
+#b1, #b2 {
+  margin: 0.5em;
+  padding: 0.5em 2em;
+  font-size: 20pt;
+  cursor: pointer;
+}
+#b1 {
+  background-color: lightgreen;
+}
+#b2 {
+  padding: 0.5em 2em;
+  font-size: 20pt;
+  background-color: lightcoral;
+}

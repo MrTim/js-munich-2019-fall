@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My news sharing app</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+    <div class="box header">
+      <h1>My news sharing app</h1>
+    </div>
+    
+    <div class="box app">
+      <h3>New post:</h3>
+      <input type="text" id="messageInput" />
+      <button id="postButton" onclick="makePost()">Post</button>
+
+      <h3>Posts</h3>
+      
+      <div id="postContainer">
+
+        <!-- template message node
+        <div class="message">
+          <b>Author: </b>
+          <p>message</p>
+          <button>Delete</button>
+        </div>
+        -->
+
+      </div>
+    </div>
+
+    <div class="footer">
+      REDI JavaScript - Fall 2019
+    </div>
+
+    <script lang="JavaScript" src="MessagingService.js"></script>
+    <script lang="JavaScript" src="posts.js"></script>
+    <script lang="JavaScript" src="script.js"></script>
+  </body>
+</html>

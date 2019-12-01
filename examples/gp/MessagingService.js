@@ -1,28 +1,33 @@
+const baseURL = 'https://twitter-gp.firebaseio.com';
 
 /**
  * Retrieve all posts from the server
- * 
- * @param {callback function that handles an array of posts} completionHandler 
+ *
+ * @param {Function} completionHandler callback function that handles an array of posts
  */
 function requestPosts(completionHandler) {
-    let posts = [
-        {author: "Anna", message: "Hello!"},
-        {author: "Harshita", message: "Hi!"},
-        {author: "Ivan", message: "Servus!"},
-        {author: "Abdullah", message: "Hallo!"},
-        {author: "Oliver", message: "Hey!"}
-    ]
-
-    completionHandler(posts);
+    fetch(`${baseURL}/posts.json`)
+        .then((response) => response.json())
+        .then((posts) => completionHandler(posts))
+        .catch(() => console.log("Booo"));
 }
 
 /**
  * Send a post object to the server
- * 
- * @param {the post to send to the server} post 
- * @param {callback function that handles a boolean succes value} completionHandler 
+ *
+ * @param {Object} post the post to send to the server
+ * @param {Function} completionHandler callback function that handles a boolean succes value
  */
 function sendPost(post, completionHandler) {
-    console.log("Sending post to server: " + post);
-    completionHandler(true);
+    const params = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(post)
+    };
+    fetch(`${baseURL}/posts.json`, params)
+        .then((response) => response.json())
+        .then((data) => completionHandler(data))
+        .catch(() => console.log("Booo"));
 }

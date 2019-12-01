@@ -17,6 +17,7 @@ function login() {
 function makePost() {
   let message = messageInput.value;
   addPost(userName, message);
+  sendPost({author: userName, message: message}, () => console.log('Done!'));
 }
 
 function postsAvailable(posts) {

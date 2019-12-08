@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<title>REDI JavaScript Fall 2019 - Group project</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<link rel="stylesheet" href="../../reveal.js/reveal_redi.css">
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<h2>Group project</h2>
+				<p>Mini Twitter 🦉</p>
+			</section>
+
+			<section>
+				<h3>Group project: 🦉 Mini Twitter</h3>
+				<ul>
+					<li>We'll build it together!</li>
+					<li>Will help you with your Final Project</li>
+					<li>Or can be extended as final project</li>
+				</ul>
+			</section>
+
+			<section class="">
+				<p>Remember how to alert the text inside the input when the button is pressed?</p>
+				<div class="input-example">
+					<input id="input-id"></input>
+					<button onclick="alert(document.getElementById('input-id').value)">Send</button>
+				</div>
+				<br>
+				<p class="fragment">You can access the text inside an input with <code
+						class="emphasis">inputElement.value</code></p>
+			</section>
+			<section>
+				<h3>Today: Add new tweet when the "Tweet" button is clicked</h3>
+				<ul>
+					<li class="fragment">Using <code>input.value</code></li>
+					<li class="fragment">...and <code>document.createElement</code></li>
+					<li class="fragment">...and <code>appendChild</code></li>
+					<li class="fragment">See Demo</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h3>Twitter Features: For the future</h3>
+				<ul>
+					<li class="fragment"><b>Clicking</b> the button <b>adds</b> the new tweet to the list</li>
+					<li class="fragment">When <b>no tweet</b> added yet, display <b>info message</b></li>
+					<li class="fragment">Input is <b>emptied</b> when tweet is added</li>
+					<li class="fragment"><b>Counter</b> that counts how many characters are left</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h3>Twitter Features: For the future</h3>
+				<ul>
+					<li class="fragment">Counter turns <b>red</b> when too many characters</li>
+					<li class="fragment">Button is only <b>enabled</b> when length is between 1 and 80</li>
+					<li class="fragment">Button turns <b>red</b> when disabled</li>
+					<li class="fragment">Hitting <b>enter</b> in the input is the same as clicking the button</li>
+				</ul>
+			</section>
+
+			<section class="smaller">
+				<h3>Twitter Features: For the future</h3>
+				<ul>
+					<li class="fragment">Interact with a simple server API (that we provide)</li>
+					<li class="fragment">Retrieve and store posts on the server</li>
+					<li class="fragment">Multiple users, liking posts <b>etc.</b></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script src="../../reveal.js/reveal_redi.js"></script>
+</body>
+
+</html>

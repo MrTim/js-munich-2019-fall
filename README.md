@@ -16,8 +16,42 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Comments
 - Function output with return
 
-### [Assignments](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/1-coding-basics/assignments.html)
-- 1.1) Greetings
-- 1.2) Interview
-- 1.3) User info
-- 1.4) Calculator Light
+## [Conditions](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/2-conditions/lecture.html)
+- if statement
+- else if, else
+- return
+- switch
+- comparisons
+- complex conditions
+
+## [Data types](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/3-data-types/lecture.html)
+- typeof
+- converting numbers and strings
+- comments
+- boolean
+- logical operators
+
+## [DOM and events](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/4-DOM-events/lecture.html)
+- Document object model
+- the document object
+- findElementById
+- textContent
+- onclick event
+- DOM tree and relationships
+- window
+- createElement
+
+## [Objects and arrays](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/6-objects/lecture.html)
+- defining objects
+- key and value
+- object functions
+- this keyword
+- nested objects
+- defining arrays
+- array length
+
+## Loops
+- Coming soon
+
+## [Project](https://oliverbrehm.github.io/js-munich-2019-fall/lessons/8-project/lecture.html)
+- Introducing the Mini Twitter project and features

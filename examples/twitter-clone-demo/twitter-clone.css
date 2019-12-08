@@ -1,0 +1,73 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+button:focus, input:focus {
+  outline:0;
+}
+
+#main {
+  max-width: 600px;
+  margin: 10% auto;
+}
+
+.newTweet {
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+.newTweet input, button {
+  padding: 0.5em;
+  font-size: 24px;
+  border: 1px solid rgba(33, 37, 41, 0.5);
+  border-radius: 10px;
+}
+
+.newTweet input {
+  width: 80%;
+  float: left;
+}
+
+.newTweet button {
+  background-color: #64b2ee;
+  color: white;
+  width: 20%;
+}
+
+.newTweet button:not([disabled]) {
+  cursor: pointer;
+}
+
+.newTweet button[disabled] {
+  background-color: #FF5964;
+}
+
+.newTweet .counter {
+  color: #464646;
+  margin-left: 20px;
+  font-size: 0.9em;
+}
+
+.newTweet .counter.error {
+  color: red;
+}
+
+#myTweets li {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+#noTweets.hidden {
+  display: none;
+}

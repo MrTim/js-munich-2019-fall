@@ -39,18 +39,54 @@
 				<p class="fragment">You can access the text inside an input with <code
 						class="emphasis">inputElement.value</code></p>
 			</section>
+
 			<section>
 				<h3>Today: Add new tweet when the "Tweet" button is clicked</h3>
 				<ul>
 					<li class="fragment">Using <code>input.value</code></li>
 					<li class="fragment">...and <code>document.createElement</code></li>
 					<li class="fragment">...and <code>appendChild</code></li>
+					<li class="fragment">Adding a character counter using events</li>
 					<li class="fragment">See Demo</li>
 				</ul>
 			</section>
 
+			<section>
+				<h3>So many DOM events!</h3>
+				<ul>
+					<li>You already know <i>onclick</i>.</li>
+					<li>Handle other events by connecting a function.</li>
+					<li>Events are sent e.g. when the mouse is dragged, a keyboard button is pressed or a form is submitted</ulil>
+					<li>For example: <b>onclick</b>, <b>onkeydown</b>, <b>onchange</b></li>
+				</ul>
+				
+			</section>
+
+			<section>
+				<h3>Events</h3>
+				<ul>
+					<li>In HTML named <b>on</b><i>eventname</i>.</li>
+					<li>In documentation listed without the <i>on</i> part.</li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/Events">MDN event documentation</a></li>
+					<li><b>Form events: </b>reset, submit</li>
+					<li><b>View events: </b> resize, scroll...</li>
+					<li><b>Keyboard events: </b> keydown, keyup...</li>
+					<li><b>Value change events: </b> change, input</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Events</h3>
+				<ul>
+					<li>... can also be added as <b>event listeners</b> in code.</li>
+					<li>element.addEventListener(eventName, handler)</li>
+					<li>Sets up an event listener function <i>handler</i>.</li>
+					<li>see example</li>
+				</ul>
+			</section>
+
 			<section class="smaller">
-				<h3>Twitter Features: For the future</h3>
+				<h3>Twitter Features</h3>
 				<ul>
 					<li class="fragment"><b>Clicking</b> the button <b>adds</b> the new tweet to the list</li>
 					<li class="fragment">When <b>no tweet</b> added yet, display <b>info message</b></li>

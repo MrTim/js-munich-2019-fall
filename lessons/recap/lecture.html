@@ -1,0 +1,344 @@
+<html>
+
+<head>
+	<title>ReDI.js Kick Off!</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+
+		.reveal li {
+			margin-bottom: 0.5em;
+		}
+
+		.reveal pre {
+			width: 100%;
+		}
+
+		.reveal pre code {
+			cursor: pointer;
+		}
+
+		.reveal li pre {
+			width: fit-content;
+		}
+
+		.logo {
+			position: fixed;
+			/* Sit on top of the page content */
+			z-index: 2;
+			/* Specify a stack order in case you're using a different order for other elements */
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+					<h1>Course recap</h1>
+			</section>
+
+			<section>
+				<h4>We forgot to define the age!</h4>
+				<ul>
+					<li class="fragment">How to tell Javascript that 'age' is a variable?</li>
+					<li class="fragment">
+						<pre><code>let age;</code></pre>
+					</li>
+					<li class="fragment">How to print out "You are (age) years old"?</li>
+					<li class="fragment">
+						<pre><code data-trim>
+							let age = 99;
+							alert("You are " + age + " years old");
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code data-trim class="javascript">
+					let userName = 'mrtim';
+					userName = 'mitrm';
+					alert(userName);
+				</code></pre>
+				<br><br>
+				<p class="fragment">would alert <b>mitrm</b></p>
+			</section>
+
+			<section>
+				<h4>Which data types you know in JavaScript?</h4>
+				<ul>
+					<li class="fragment">Number</li>
+					<li class="fragment">String</li>
+					<li class="fragment">Boolean</li>
+					<li class="fragment">Array</li>
+					<li class="fragment">Object</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>How to check type of variable age?</h4>
+				<p class="fragment">
+					<pre><code data-trim>
+						let age = "99";
+					</code></pre>
+				</p>
+				<div class="answer fragment">
+					<pre><code data-trim>
+						typeof(age)
+					</code></pre>
+				</div>
+			</section>
+
+			<section>
+				<h4>Data types</h4>
+				<ul>
+					<li class="fragment">What is a value of age?</li>
+					<li class="fragment">
+						<pre><code>let age = '9' + 9</code></pre>
+					</li>
+					<li class="fragment">
+							<pre><code>let age = 9 + '9'</code></pre>
+						</li>
+					<li class="fragment">
+						<pre><code>let age = 0 + '9' + 9</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>let age = 1 + 9 + '9'</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>Functions</h4>
+				<ul>
+					<li class="fragment">How to define a function?</li>
+					<li class="fragment">
+						<pre><code>function myFunctionNameHere() {}</code></pre>
+					</li>
+					<li class="fragment">How to define a function with 2 arguments?</li>
+					<li class="fragment">
+						<pre><code>function myFunctionNameHere(arg1, arg2) {}</code></pre>
+					</li>
+					<li class="fragment">How do you run/call function?</li>
+					<li class="fragment">
+						<pre><code>myFunctionNameHere('argument1', 12);</code></pre>
+					</li>
+					<li class="fragment">How to call function without arguments?</li>
+					<li class="fragment">
+						<pre><code>myFunctionNameHere();</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>Find all errors:</h4>
+				<pre><code data-trim>
+					let result;
+
+					this function combines two strings with a space in between
+					function combinewithspace(a, b {
+						myResult = a + " " + b;
+					}
+
+					combine("hi" "there") alert(myResult);
+				</code></pre>
+			</section>
+
+			<section>
+				<p>What does this do?</p>
+				<pre><code data-trim>
+					function calculateDistance(speed, time) {
+						let distance = speed * time;
+						return distance;
+					}
+
+					let distance = calculateDistance(150, 2);
+
+					alert("The answer is: " + x);
+				</code></pre>
+			</section>
+
+			<section>
+				<h4>Conditions</h4>
+				<ul>
+					<li class="fragment">Which comparison operators are there?</li>
+					<li class="fragment answer">
+						<code>===, !==, &lt;, &gt;, &lt;=, &gt;=</code>
+					</li>
+					<li class="fragment">Which keywords do you remember for conditions?</li>
+					<li class="fragment answer">
+						<code>if, else, switch, case, break</code>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>Conditions</h4>
+				<ul>
+					<li class="fragment">
+						<pre><code data-trim>
+							let z = 3 === 9;
+							alert(typeof(z));
+						</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code data-trim>
+							let x = 22;
+							if (x < 22) {
+								alert('🐔');
+							} else {
+								alert('🦊');
+							}
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>What will happen?</h4>
+				<pre><code data-trim>
+					let x = true;
+					function f() {
+						x = false;
+					}
+					f();
+					alert(x);
+				</code></pre>
+			</section>
+
+			<section>
+				<h4>Guess the results:</h4>
+				<ul>
+					<li class="fragment"><pre><code>alert(12 > 33);</code></pre></li>
+					<li class="fragment"><pre><code>alert(12 < 33);</code></pre></li>
+					<li class="fragment"><pre><code>alert(12 === '12');</code></pre></li>
+					<li class="fragment"><pre><code>alert(12 !== 33);</code></pre></li>
+					<li class="fragment"><pre><code>alert("bla" === "bla");</code></pre></li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && 3 < 4);</code></pre>
+					</li>
+					<li class="fragment">
+						<pre><code>alert(3 > 2 && !(3 > 2));</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>DOM</h4>
+				<pre><code data-trim>
+					&lt;h2 id="list-header"&gt;Colors:&lt;/h2&gt;
+					&lt;ul id="colors-list"&gt;
+						&lt;li id="color-blue"&gt;Blue&lt;/li&gt;
+						&lt;li id="color-red"&gt;Red&lt;/li&gt;
+					&lt;/ul&gt;
+				</code></pre>
+				<br>
+				<ul>
+					<li class="fragment">How do you get the "Blue" color list element?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("color-blue");</code></li>
+					<li class="fragment">How do you get the list itself?</li>
+					<li class="smaller answer fragment"><code>document.getElementById("colors-list");</code></li>
+				</ul>
+			</section>
+
+			<section>
+				<h4>Objects</h4>
+				<ul>
+					<li class="fragment">How do you create an empty <b>book</b> object?</li>
+					<li class="fragment">
+						<pre><code>let book = {};</code></pre>
+					</li>
+					<li class="fragment">How do you create a <b>book</b> object with title and pages properties?</li>
+					<li class="fragment">
+						<pre><code>let book = {
+	title: "Strange thing",
+	pages: 352
+};
+						</code></pre>
+					</li>
+					<li class="fragment">How to add author property?</li>
+					<li class="fragment">
+						<pre><code>book.author = "Someone else"</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<p>What's wrong with this code?</p>
+				<pre><code>let book = {
+	title: "Strange thing",
+	pages: 352,
+	changePages: function(amount) {
+		pages = amount
+	}
+};
+book.changePages(123);
+				</code></pre>
+			</section>
+
+			<section>
+				<h4>Arrays</h4>
+				<ul>
+					<li class="fragment">How do you create an empty <b>names</b> array?</li>
+					<li class="fragment">
+						<pre><code>let names = [];</code></pre>
+					</li>
+					<li class="fragment">How do add name in this array?</li>
+					<li class="fragment">
+						<pre><code>names.push("Vasja")</code></pre>
+						<pre><code>names.push("Petja")</code></pre>
+					</li>
+					<li class="fragment">How to get length of names array?</li>
+					<li class="fragment">
+						<pre><code>names.length</code></pre>
+					</li>
+					<li class="fragment">How to get first element from an array?</li>
+					<li class="fragment">
+						<pre><code>names[0]</code></pre>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+
+	<script src="../../jquery-3.3.1.slim.min.js"></script>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+			]
+		});
+
+		// Make each code example executable by clicking it:
+		$(document).ready(function () {
+			$('code').click(function (event) {
+				console.info('Click!', $(this).text());
+				eval($(this).text());
+			});
+		});
+	</script>
+</body>
+
+</html>

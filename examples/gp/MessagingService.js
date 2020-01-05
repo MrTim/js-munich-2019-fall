@@ -31,3 +31,22 @@ function sendPost(post, completionHandler) {
         .then((data) => completionHandler(data))
         .catch(() => console.log("Booo"));
 }
+
+/**
+ * Delete post object with specific id from the server
+ *
+ * @param {String} postId
+ * @param {Function} completionHandler callback function that handles a boolean succes value
+ */
+function deletePost(postId, completionHandler) {
+    const params = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    fetch(`${baseURL}/posts/${postId}.json`, params)
+        .then((response) => response.json())
+        .then((data) => completionHandler(data))
+        .catch(() => console.log("Booo"));
+}
